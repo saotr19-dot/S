@@ -125,9 +125,9 @@
             color: #0A1929;
         }
 
-        /* عنوان الصفحة الداخلية - تم تحديث الخلفية لصورة أكثر إشراقاً */
+        /* عنوان الصفحة الداخلية - تم تحسين الوضوح بتخفيف التدرج */
         .page-header {
-            background: linear-gradient(rgba(10,25,41,0.8), rgba(10,25,41,0.8)), url('https://i.postimg.cc/JnkcnMf4/1729579646.webp');
+            background: linear-gradient(rgba(10,25,41,0.3), rgba(10,25,41,0.3)), url('https://i.postimg.cc/JnkcnMf4/1729579646.webp');
             background-size: cover;
             background-position: center;
             color: white;
@@ -139,14 +139,15 @@
         .page-header h2 {
             font-size: clamp(2.2rem, 6vw, 3.2rem);
             margin-bottom: 15px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
             color: #E86A33;
         }
         .page-header p {
             font-size: clamp(1.1rem, 3vw, 1.4rem);
             max-width: 700px;
             margin: 0 auto;
-            color: #F5F7FA;
+            color: #fff;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
         }
 
         /* الحاوية العامة */
@@ -315,6 +316,45 @@
             transform: scale(1.05);
         }
 
+        /* قسم الكلمات المفتاحية الجديد */
+        .keywords-section {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 30px 20px;
+            margin: 40px auto 20px;
+            max-width: 1200px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-right: 4px solid #E86A33;
+            text-align: center;
+        }
+        .keywords-section h3 {
+            color: #0A1929;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .keywords-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .keyword-item {
+            background-color: #F5F7FA;
+            color: #0A1929;
+            padding: 6px 15px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+            transition: 0.2s;
+        }
+        .keyword-item:hover {
+            background-color: #E86A33;
+            color: white;
+            border-color: #E86A33;
+        }
+
         /* الأزرار العائمة - محدثة برقم الهاتف الجديد */
         .float-btn {
             position: fixed;
@@ -350,7 +390,7 @@
             color: white;
             text-align: center;
             padding: 30px 20px;
-            margin-top: 70px;
+            margin-top: 40px;
             width: 100%;
             font-size: 0.95rem;
         }
@@ -414,7 +454,7 @@
     <a href="mashabat.html">مشبات تراثية</a>
 </nav>
 
-<!-- عنوان الصفحة - تم تحديث الخلفية لصورة أكثر إشراقاً -->
+<!-- عنوان الصفحة - تم تحسين وضوح الخلفية -->
 <section class="page-header">
     <h2>قرميد - أسقف قرميدية فاخرة</h2>
     <p>قرميد إسباني ووطني - عازل حراري ممتاز - أفضل الأعمال 2026 في الأحساء</p>
@@ -424,6 +464,28 @@
 <div class="container">
     <h2 class="section-title">أحدث تصاميم القرميد 2026</h2>
     <div class="gallery-grid" id="gallery-grid"></div>
+</div>
+
+<!-- قسم الكلمات المفتاحية الجديد -->
+<div class="container">
+    <div class="keywords-section">
+        <h3>كلمات مفتاحية: تصنيفات القرميد</h3>
+        <div class="keywords-container">
+            <span class="keyword-item">قرميد</span>
+            <span class="keyword-item">أسقف قرميدية</span>
+            <span class="keyword-item">قرميد إسباني</span>
+            <span class="keyword-item">قرميد وطني</span>
+            <span class="keyword-item">قرميد للفلل</span>
+            <span class="keyword-item">عزل حراري</span>
+            <span class="keyword-item">قرميد أحمر</span>
+            <span class="keyword-item">قرميد ملون</span>
+            <span class="keyword-item">قرميد أزرق</span>
+            <span class="keyword-item">تركيب قرميد</span>
+            <span class="keyword-item">قرميد للأحواش</span>
+            <span class="keyword-item">قرميد 2026</span>
+            <span class="keyword-item">أفضل قرميد</span>
+        </div>
+    </div>
 </div>
 
 <!-- الأزرار العائمة برقم الهاتف الجديد 0544459478 -->
@@ -519,7 +581,6 @@
     });
 </script>
 
-<!-- نص مخفي لتحسين SEO -->
-<span style="display: none;">قرميد الأحساء، أسقف قرميدية، قرميد إسباني، قرميد وطني، عازل حراري، أفضل قرميد في الهفوف والمبرز والعيون 2026، تركيب قرميد للفلل</span>
+<!-- تم إزالة النص المخفي واستبداله بقسم الكلمات المفتاحية المرئي -->
 </body>
 </html>
