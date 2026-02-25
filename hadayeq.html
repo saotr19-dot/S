@@ -125,9 +125,9 @@
             color: #0A1929;
         }
 
-        /* عنوان الصفحة الداخلية - تم تحديث الخلفية بالصورة الجديدة */
+        /* عنوان الصفحة الداخلية - تم تحسين الوضوح بتخفيف التدرج */
         .page-header {
-            background: linear-gradient(rgba(10,25,41,0.8), rgba(10,25,41,0.8)), url('https://i.postimg.cc/L8y8qfRd/5377619498266988842-121.jpg');
+            background: linear-gradient(rgba(10,25,41,0.3), rgba(10,25,41,0.3)), url('https://i.postimg.cc/L8y8qfRd/5377619498266988842-121.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -139,14 +139,15 @@
         .page-header h2 {
             font-size: clamp(2rem, 6vw, 3rem);
             margin-bottom: 15px;
-            text-shadow: 2px 2px 5px black;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
             color: #E86A33;
         }
         .page-header p {
             font-size: clamp(1rem, 3vw, 1.3rem);
             max-width: 700px;
             margin: 0 auto;
-            color: #F5F7FA;
+            color: #fff;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
         }
 
         /* الحاوية العامة */
@@ -310,6 +311,45 @@
             background-color: #c04e2b;
         }
 
+        /* قسم الكلمات المفتاحية الجديد */
+        .keywords-section {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 30px 20px;
+            margin: 40px auto 20px;
+            max-width: 1200px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-right: 4px solid #E86A33;
+            text-align: center;
+        }
+        .keywords-section h3 {
+            color: #0A1929;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .keywords-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .keyword-item {
+            background-color: #F5F7FA;
+            color: #0A1929;
+            padding: 6px 15px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+            transition: 0.2s;
+        }
+        .keyword-item:hover {
+            background-color: #E86A33;
+            color: white;
+            border-color: #E86A33;
+        }
+
         /* الأزرار العائمة - محدثة برقم الهاتف الجديد */
         .float-btn {
             position: fixed;
@@ -345,7 +385,7 @@
             color: white;
             text-align: center;
             padding: 25px 15px;
-            margin-top: 60px;
+            margin-top: 40px;
             width: 100%;
             font-size: 0.9rem;
         }
@@ -407,10 +447,10 @@
     <a href="#">درج حديد خارجي</a>
     <a href="sandwich-panel.html">ساندوتش بانل</a>
     <a href="decor.html">ديكورات</a>
-    <a href="#">تصميم مظلات</a>
+    <a href="mashabat.html">مشبات تراثية</a>
 </nav>
 
-<!-- عنوان الصفحة - تم تحديث الخلفية بالصورة الجديدة -->
+<!-- عنوان الصفحة - تم تحسين وضوح الخلفية -->
 <section class="page-header">
     <h2>تنسيق حدائق وعشب صناعي</h2>
     <p>تصميم وتنفيذ حدائق منزلية وفيلات بأجود أنواع العشب الصناعي والإضاءات الحديثة</p>
@@ -420,6 +460,30 @@
 <div class="container">
     <h2 class="section-title">أحدث تصاميم الحدائق 2026</h2>
     <div class="gallery-grid" id="gallery-grid"></div>
+</div>
+
+<!-- قسم الكلمات المفتاحية الجديد -->
+<div class="container">
+    <div class="keywords-section">
+        <h3>كلمات مفتاحية: تنسيق الحدائق</h3>
+        <div class="keywords-container">
+            <span class="keyword-item">تنسيق حدائق</span>
+            <span class="keyword-item">عشب صناعي</span>
+            <span class="keyword-item">تصميم حدائق</span>
+            <span class="keyword-item">حدائق منزلية</span>
+            <span class="keyword-item">لاندسكيب</span>
+            <span class="keyword-item">نوافير</span>
+            <span class="keyword-item">شلالات</span>
+            <span class="keyword-item">إضاءة ليد</span>
+            <span class="keyword-item">عشب أخضر</span>
+            <span class="keyword-item">حدائق فلل</span>
+            <span class="keyword-item">عشب هولندي</span>
+            <span class="keyword-item">تنسيق حدائق الأحساء</span>
+            <span class="keyword-item">زراعة أشجار</span>
+            <span class="keyword-item">جلسات خارجية</span>
+            <span class="keyword-item">حدائق 2026</span>
+        </div>
+    </div>
 </div>
 
 <!-- الأزرار العائمة برقم الهاتف الجديد 0544459478 -->
@@ -542,7 +606,6 @@
     });
 </script>
 
-<!-- نص مخفي لتحسين SEO -->
-<span style="display: none;">تنسيق حدائق الأحساء، عشب صناعي، تصميم حدائق، حدائق منزلية، عشب أخضر، نوافير، شلالات، إضاءات حدائق، لاندسكيب، أفضل شركة تنسيق حدائق في الهفوف والمبرز والعيون 2026</span>
+<!-- تم إزالة النص المخفي واستبداله بقسم الكلمات المفتاحية المرئي -->
 </body>
-</html>
+    </html>
