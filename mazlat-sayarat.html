@@ -125,9 +125,9 @@
             color: #0A1929;
         }
 
-        /* عنوان الصفحة الداخلية - باستخدام إحدى صور المظلات */
+        /* عنوان الصفحة الداخلية - تم تحسين الوضوح بتخفيف التدرج */
         .page-header {
-            background: linear-gradient(rgba(10,25,41,0.8), rgba(10,25,41,0.8)), url('https://i.postimg.cc/fRRPbSBv/IMG-20240421-WA0005.webp');
+            background: linear-gradient(rgba(10,25,41,0.3), rgba(10,25,41,0.3)), url('https://i.postimg.cc/fRRPbSBv/IMG-20240421-WA0005.webp');
             background-size: cover;
             background-position: center;
             color: white;
@@ -139,14 +139,15 @@
         .page-header h2 {
             font-size: clamp(2.2rem, 6vw, 3.2rem);
             margin-bottom: 15px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
             color: #E86A33;
         }
         .page-header p {
             font-size: clamp(1.1rem, 3vw, 1.4rem);
             max-width: 700px;
             margin: 0 auto;
-            color: #F5F7FA;
+            color: #fff;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
         }
 
         /* الحاوية العامة */
@@ -315,6 +316,45 @@
             transform: scale(1.05);
         }
 
+        /* قسم الكلمات المفتاحية الجديد */
+        .keywords-section {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 30px 20px;
+            margin: 40px auto 20px;
+            max-width: 1200px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-right: 4px solid #E86A33;
+            text-align: center;
+        }
+        .keywords-section h3 {
+            color: #0A1929;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .keywords-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .keyword-item {
+            background-color: #F5F7FA;
+            color: #0A1929;
+            padding: 6px 15px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+            transition: 0.2s;
+        }
+        .keyword-item:hover {
+            background-color: #E86A33;
+            color: white;
+            border-color: #E86A33;
+        }
+
         /* الأزرار العائمة - محدثة برقم الهاتف الجديد */
         .float-btn {
             position: fixed;
@@ -350,7 +390,7 @@
             color: white;
             text-align: center;
             padding: 30px 20px;
-            margin-top: 70px;
+            margin-top: 40px;
             width: 100%;
             font-size: 0.95rem;
         }
@@ -414,7 +454,7 @@
     <a href="mashabat.html">مشبات تراثية</a>
 </nav>
 
-<!-- عنوان الصفحة - خلفية من صور المظلات -->
+<!-- عنوان الصفحة - تم تحسين وضوح الخلفية -->
 <section class="page-header">
     <h2>مظلات سيارات - مسابح - مواقف - مدارس</h2>
     <p>مظلات هرمية ومخروطية - أفضل الأعمال 2026 في الأحساء</p>
@@ -424,6 +464,28 @@
 <div class="container">
     <h2 class="section-title">أحدث تصاميم المظلات 2026</h2>
     <div class="gallery-grid" id="gallery-grid"></div>
+</div>
+
+<!-- قسم الكلمات المفتاحية الجديد -->
+<div class="container">
+    <div class="keywords-section">
+        <h3>كلمات مفتاحية: تصنيفات المظلات</h3>
+        <div class="keywords-container">
+            <span class="keyword-item">مظلات سيارات</span>
+            <span class="keyword-item">مظلات مسابح</span>
+            <span class="keyword-item">مظلات مواقف</span>
+            <span class="keyword-item">مظلات مدارس</span>
+            <span class="keyword-item">مظلات هرمية</span>
+            <span class="keyword-item">مظلات مخروطية</span>
+            <span class="keyword-item">مظلات قوسية</span>
+            <span class="keyword-item">مظلات الأحساء</span>
+            <span class="keyword-item">عازل حراري</span>
+            <span class="keyword-item">مقاومة للعوامل الجوية</span>
+            <span class="keyword-item">مظلات حدائق</span>
+            <span class="keyword-item">مظلات سيارات 2026</span>
+            <span class="keyword-item">أفضل مظلات</span>
+        </div>
+    </div>
 </div>
 
 <!-- الأزرار العائمة برقم الهاتف الجديد 0544459478 -->
@@ -624,7 +686,6 @@
     });
 </script>
 
-<!-- نص مخفي لتحسين SEO -->
-<span style="display: none;">مظلات سيارات الأحساء، مظلات مسابح، مظلات مواقف، مظلات مدارس، مظلات هرمية، مظلات مخروطية، أفضل مظلات في الهفوف والمبرز والعيون 2026</span>
+<!-- تم إزالة النص المخفي واستبداله بقسم الكلمات المفتاحية المرئي -->
 </body>
 </html>
