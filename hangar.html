@@ -137,9 +137,9 @@
             color: #0A1929;
         }
 
-        /* عنوان الصفحة الداخلية - باستخدام إحدى صور الهناجر */
+        /* عنوان الصفحة الداخلية - تم تحسين الوضوح بتخفيف التدرج */
         .page-header {
-            background: linear-gradient(rgba(10,25,41,0.8), rgba(10,25,41,0.8)), url('https://i.postimg.cc/6phGMyXd/5449855625505476562-121.jpg');
+            background: linear-gradient(rgba(10,25,41,0.3), rgba(10,25,41,0.3)), url('https://i.postimg.cc/6phGMyXd/5449855625505476562-121.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -151,14 +151,15 @@
         .page-header h2 {
             font-size: clamp(2.2rem, 6vw, 3.2rem);
             margin-bottom: 15px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
             color: #E86A33;
         }
         .page-header p {
             font-size: clamp(1.1rem, 3vw, 1.4rem);
             max-width: 700px;
             margin: 0 auto;
-            color: #F5F7FA;
+            color: #fff;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
         }
 
         /* الحاوية العامة */
@@ -332,6 +333,45 @@
             transform: scale(1.05);
         }
 
+        /* قسم الكلمات المفتاحية الجديد */
+        .keywords-section {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 30px 20px;
+            margin: 40px auto 20px;
+            max-width: 1200px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-right: 4px solid #E86A33;
+            text-align: center;
+        }
+        .keywords-section h3 {
+            color: #0A1929;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .keywords-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .keyword-item {
+            background-color: #F5F7FA;
+            color: #0A1929;
+            padding: 6px 15px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+            transition: 0.2s;
+        }
+        .keyword-item:hover {
+            background-color: #E86A33;
+            color: white;
+            border-color: #E86A33;
+        }
+
         /* الأزرار العائمة - محدثة برقم الهاتف الجديد */
         .float-btn {
             position: fixed;
@@ -367,7 +407,7 @@
             color: white;
             text-align: center;
             padding: 30px 20px;
-            margin-top: 70px;
+            margin-top: 40px;
             width: 100%;
             font-size: 0.95rem;
             position: relative;
@@ -444,10 +484,10 @@
     <a href="khayam.html">بيوت شعر ملكي</a>
     <a href="sandwich-panel.html">ساندوتش بانل</a>
     <a href="decor.html">ديكورات</a>
-    <a href="#">تصميم مظلات</a>
+    <a href="mashabat.html">مشبات تراثية</a>
 </nav>
 
-<!-- عنوان الصفحة - خلفية من صور الهناجر -->
+<!-- عنوان الصفحة - تم تحسين وضوح الخلفية -->
 <section class="page-header">
     <h2>هناجر ومستودعات</h2>
     <p>هياكل حديدية ضخمة - تغطية بشينكو وساندوتش بانل - أفضل الأعمال 2026 في الأحساء</p>
@@ -457,6 +497,30 @@
 <div class="container">
     <h2 class="section-title">أحدث تصاميم الهناجر والمستودعات 2026</h2>
     <div class="gallery-grid" id="gallery-grid"></div>
+</div>
+
+<!-- قسم الكلمات المفتاحية الجديد -->
+<div class="container">
+    <div class="keywords-section">
+        <h3>كلمات مفتاحية: تصنيفات الهناجر والمستودعات</h3>
+        <div class="keywords-container">
+            <span class="keyword-item">هناجر</span>
+            <span class="keyword-item">مستودعات</span>
+            <span class="keyword-item">هناجر حديد</span>
+            <span class="keyword-item">مستودعات صناعية</span>
+            <span class="keyword-item">شينكو</span>
+            <span class="keyword-item">ساندوتش بانل</span>
+            <span class="keyword-item">هياكل حديدية</span>
+            <span class="keyword-item">هناجر الأحساء</span>
+            <span class="keyword-item">مستودعات تخزين</span>
+            <span class="keyword-item">هناجر زراعية</span>
+            <span class="keyword-item">مستودعات جاهزة</span>
+            <span class="keyword-item">هناجر مصانع</span>
+            <span class="keyword-item">عزل حراري</span>
+            <span class="keyword-item">هناجر 2026</span>
+            <span class="keyword-item">أفضل هناجر</span>
+        </div>
+    </div>
 </div>
 
 <!-- الأزرار العائمة برقم الهاتف الجديد 0544459478 -->
@@ -548,7 +612,6 @@
     });
 </script>
 
-<!-- نص مخفي لتحسين SEO -->
-<span style="display: none;">هناجر الأحساء، مستودعات، هناجر حديد، مستودعات صناعية، شينكو، ساندوتش بانل، أفضل هناجر في الهفوف والمبرز والعيون 2026، إنشاءات صناعية</span>
+<!-- تم إزالة النص المخفي واستبداله بقسم الكلمات المفتاحية المرئي -->
 </body>
 </html>
