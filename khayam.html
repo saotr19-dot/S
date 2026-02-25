@@ -125,9 +125,9 @@
             color: #0A1929;
         }
 
-        /* عنوان الصفحة الداخلية - تم تحديث الخلفية */
+        /* عنوان الصفحة الداخلية - تم تحسين الوضوح بتخفيف التدرج */
         .page-header {
-            background: linear-gradient(rgba(10,25,41,0.8), rgba(10,25,41,0.8)), url('https://i.postimg.cc/bNC8yPpH/225991618494658-350x350.jpg');
+            background: linear-gradient(rgba(10,25,41,0.3), rgba(10,25,41,0.3)), url('https://i.postimg.cc/bNC8yPpH/225991618494658-350x350.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -139,14 +139,15 @@
         .page-header h2 {
             font-size: clamp(2rem, 6vw, 3rem);
             margin-bottom: 15px;
-            text-shadow: 2px 2px 5px black;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
             color: #E86A33;
         }
         .page-header p {
             font-size: clamp(1rem, 3vw, 1.3rem);
             max-width: 700px;
             margin: 0 auto;
-            color: #F5F7FA;
+            color: #fff;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
         }
 
         /* الحاوية العامة */
@@ -310,6 +311,45 @@
             background-color: #c04e2b;
         }
 
+        /* قسم الكلمات المفتاحية الجديد */
+        .keywords-section {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 30px 20px;
+            margin: 40px auto 20px;
+            max-width: 1200px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-right: 4px solid #E86A33;
+            text-align: center;
+        }
+        .keywords-section h3 {
+            color: #0A1929;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .keywords-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .keyword-item {
+            background-color: #F5F7FA;
+            color: #0A1929;
+            padding: 6px 15px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+            transition: 0.2s;
+        }
+        .keyword-item:hover {
+            background-color: #E86A33;
+            color: white;
+            border-color: #E86A33;
+        }
+
         /* الأزرار العائمة - محدثة برقم الهاتف الجديد */
         .float-btn {
             position: fixed;
@@ -345,7 +385,7 @@
             color: white;
             text-align: center;
             padding: 25px 15px;
-            margin-top: 60px;
+            margin-top: 40px;
             width: 100%;
             font-size: 0.9rem;
         }
@@ -407,10 +447,10 @@
     <a href="#">درج حديد خارجي</a>
     <a href="sandwich-panel.html">ساندوتش بانل</a>
     <a href="decor.html">ديكورات</a>
-    <a href="#">تصميم مظلات</a>
+    <a href="mashabat.html">مشبات تراثية</a>
 </nav>
 
-<!-- عنوان الصفحة - تم تحديث الخلفية -->
+<!-- عنوان الصفحة - تم تحسين وضوح الخلفية -->
 <section class="page-header">
     <h2>خيام وبيوت شعر ملكية</h2>
     <p>أحدث الأعمال 2026 - أفخم البيوت الشعرية والخيام المجلسية بتصاميم تراثية وعصرية</p>
@@ -420,6 +460,30 @@
 <div class="container">
     <h2 class="section-title">أحدث تصاميم الخيام والبيوت الشعرية 2026</h2>
     <div class="gallery-grid" id="gallery-grid"></div>
+</div>
+
+<!-- قسم الكلمات المفتاحية الجديد -->
+<div class="container">
+    <div class="keywords-section">
+        <h3>كلمات مفتاحية: تصنيفات الخيام والبيوت الشعرية</h3>
+        <div class="keywords-container">
+            <span class="keyword-item">بيوت شعر</span>
+            <span class="keyword-item">خيام ملكي</span>
+            <span class="keyword-item">خيام فاخرة</span>
+            <span class="keyword-item">بيوت شعر 2026</span>
+            <span class="keyword-item">جلد PVC كوري</span>
+            <span class="keyword-item">خيام مجالس</span>
+            <span class="keyword-item">بيوت شعر تراثية</span>
+            <span class="keyword-item">سدو فاخر</span>
+            <span class="keyword-item">بيوت شعر الأحساء</span>
+            <span class="keyword-item">خيام مناسبات</span>
+            <span class="keyword-item">بيوت شعر ملكية</span>
+            <span class="keyword-item">مشبات تراثية</span>
+            <span class="keyword-item">عزل حراري</span>
+            <span class="keyword-item">خيام عصرية</span>
+            <span class="keyword-item">أفضل بيوت شعر</span>
+        </div>
+    </div>
 </div>
 
 <!-- الأزرار العائمة برقم الهاتف الجديد 0544459478 -->
@@ -592,7 +656,6 @@
     });
 </script>
 
-<!-- نص مخفي لتحسين SEO -->
-<span style="display: none;">بيوت شعر الأحساء، خيام ملكي، خيام فاخرة، بيوت شعر 2026، بيوت شعر جلد PVC، خيام مجالس، مشبات تراثية، أفضل بيوت شعر في الهفوف والمبرز والعيون 2026، سدو فاخر</span>
+<!-- تم إزالة النص المخفي واستبداله بقسم الكلمات المفتاحية المرئي -->
 </body>
 </html>
