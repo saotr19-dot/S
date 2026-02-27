@@ -350,6 +350,107 @@
             border-color: #E86A33;
         }
 
+        /* قسم المقالات الجديد - أسفل الصفحة */
+        .articles-section {
+            margin-top: 60px;
+            padding: 40px 20px;
+            background: #fff;
+            border-radius: 40px 40px 0 0;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
+        }
+        .articles-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        @media (min-width: 640px) {
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .articles-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        .article-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(232,106,51,0.15);
+            border-color: #E86A33;
+        }
+        .article-image {
+            height: 180px;
+            overflow: hidden;
+        }
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+        .article-card:hover .article-image img {
+            transform: scale(1.05);
+        }
+        .article-content {
+            padding: 20px 15px;
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0A1929;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .article-title a {
+            color: #0A1929;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .article-title a:hover {
+            color: #E86A33;
+        }
+        .article-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-bottom: 10px;
+        }
+        .article-meta i {
+            color: #E86A33;
+            margin-left: 5px;
+        }
+        .article-excerpt {
+            font-size: 0.9rem;
+            color: #334155;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .read-more {
+            display: inline-block;
+            background: #E86A33;
+            color: #0A1929;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .read-more:hover {
+            background: #c04e2b;
+            color: #fff;
+        }
+
         /* الأزرار العائمة - محدثة برقم الهاتف الجديد */
         .float-btn {
             position: fixed;
@@ -384,10 +485,34 @@
             background: #0A1929;
             color: white;
             text-align: center;
-            padding: 25px 15px;
+            padding: 30px 20px;
             margin-top: 40px;
             width: 100%;
+            font-size: 0.95rem;
+        }
+        /* قسم روابط سريعة للفهرسة */
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 40px;
+        }
+        .quick-links a {
+            color: #E86A33;
+            text-decoration: none;
             font-size: 0.9rem;
+            padding: 5px 10px;
+            border-radius: 20px;
+            background: rgba(232,106,51,0.1);
+            transition: 0.3s;
+        }
+        .quick-links a:hover {
+            background: #E86A33;
+            color: #0A1929;
         }
         .social-links {
             display: flex;
@@ -486,15 +611,39 @@
     </div>
 </div>
 
+<!-- ===== قسم المقالات الجديد (20 مقالة) ===== -->
+<div class="articles-section">
+    <div class="container">
+        <h2 class="section-title">آخر المقالات</h2>
+        <div class="articles-grid" id="articles-grid"></div>
+    </div>
+</div>
+
 <!-- الأزرار العائمة برقم الهاتف الجديد 0544459478 -->
 <a href="tel:0544459478" class="float-btn phone" title="اتصل بنا"><i class="fas fa-phone-alt"></i></a>
 <a href="https://wa.me/966544459478?text=السلام%20عليكم%20أريد%20استفسارًا%20عن%20تنسيق%20الحدائق%202026" target="_blank" class="float-btn whatsapp" title="واتساب"><i class="fab fa-whatsapp"></i></a>
 
-<!-- تذييل مع روابط التواصل المحدّثة -->
+<!-- تذييل مع روابط التواصل المحدّثة وإضافة روابط سريعة للفهرسة -->
 <footer>
     <p>جميع الحقوق محفوظة © 2026 مظلات سواتر برجولات الخليج – الأحساء</p>
     <p>الهفوف - المبرز - العيون - الجفر - المنيزلة</p>
-    <!-- روابط التواصل الاجتماعي المحدّثة -->
+    
+    <!-- قسم روابط سريعة (للفهرسة) -->
+    <div class="quick-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="berjolat.html">برجولات</a>
+        <a href="hadayeq.html">تنسيق حدائق</a>
+        <a href="khayam.html">بيوت شعر</a>
+        <a href="sawater.html">سواتر</a>
+        <a href="mazlat-lksan.html">مظلات لكسان</a>
+        <a href="sandwich-panel.html">ساندوتش بانل</a>
+        <a href="mazlat-sayarat.html">مظلات سيارات</a>
+        <a href="decor.html">ديكورات</a>
+        <a href="qarmid.html">قرميد</a>
+        <a href="hangar.html">هناجر</a>
+        <a href="mashabat.html">مشبات</a>
+    </div>
+
     <div class="social-links">
         <a href="https://www.instagram.com/almiz_alaat?igsh=MXVuMmx1dngwaWJyMw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://www.tiktok.com/@user9638160751825?_r=1&_t=ZS-94CiF4wkfSu" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
@@ -504,7 +653,7 @@
     <div class="designer">تصميم <span>سليمان الحكمي</span> 0551987351</div>
 </footer>
 
-<!-- JavaScript لإنشاء البطاقات (تم تعديل العنوان ليكون "تصميم 2026") -->
+<!-- JavaScript لإنشاء البطاقات والمقالات -->
 <script>
     // قائمة بجميع صور تنسيق الحدائق والعشب الصناعي
     const images = [
@@ -568,6 +717,30 @@
         { text: "أصبحت حديقة منزلي منتجعاً صغيراً بفضل تصميمهم الرائع.", client: "يوسف العلي - المنيزلة" }
     ];
 
+    // قائمة الـ 20 مقالة حول تنسيق الحدائق
+    const articlesData = [
+        { title: "أفضل أنواع العشب الصناعي للحدائق المنزلية", excerpt: "دليلك الشامل لاختيار العشب الصناعي المناسب لحديقتك، مع نصائح حول الكثافة والارتفاع والمواد.", img: "https://i.postimg.cc/vmcH5BHZ/5375329327215480896-121.jpg", date: "2026-02-25" },
+        { title: "كيف تصمم حديقة منزلية عصرية؟", excerpt: "أفكار وتصاميم حديثة للحدائق المنزلية، مع نصائح حول اختيار النباتات والإضاءة.", img: "https://i.postimg.cc/3wdJ2RJw/5375329327215480899-121.jpg", date: "2026-02-20" },
+        { title: "مميزات العشب الصناعي الهولندي", excerpt: "تعرف على أفضل أنواع العشب الصناعي المستورد من هولندا، وأسعاره وضماناته.", img: "https://i.postimg.cc/8CjPL5Pj/5375329327215480900-121.jpg", date: "2026-02-18" },
+        { title: "أفكار لإضاءة الحدائق بالليد", excerpt: "تصاميم إضاءة مبتكرة تجعل حديقتك ساحرة ليلاً، مع توفير في استهلاك الطاقة.", img: "https://i.postimg.cc/HLVsbxsn/5375329327215480901-121.jpg", date: "2026-02-15" },
+        { title: "كيف تختار النباتات المناسبة لحديقتك؟", excerpt: "نصائح حول اختيار النباتات والأشجار التي تتناسب مع مناخ الأحساء.", img: "https://i.postimg.cc/Dz8y1ZyZ/5375329327215480903-121.jpg", date: "2026-02-12" },
+        { title: "تركيب العشب الصناعي: خطوة بخطوة", excerpt: "دليل كامل لتركيب العشب الصناعي بطريقة صحيحة تضمن عمراً طويلاً.", img: "https://i.postimg.cc/hGfPVjPS/5375329327215480904-121.jpg", date: "2026-02-10" },
+        { title: "أفكار لجلسات خارجية في الحديقة", excerpt: "تصاميم جلسات عربية وعصرية تجمع بين الراحة والجمال.", img: "https://i.postimg.cc/0Nb27Q22/5375329327215480905-121.jpg", date: "2026-02-08" },
+        { title: "نوافير وشلالات منزلية", excerpt: "أحدث تصاميم النوافير والشلالات الصناعية التي تضيف حركة وحيوية للحديقة.", img: "https://i.postimg.cc/JhG4jn4r/5375329327215480908-121.jpg", date: "2026-02-05" },
+        { title: "العناية بالحدائق بعد التركيب", excerpt: "نصائح للحفاظ على حديقتك المنزلية خضراء وجميلة طوال العام.", img: "https://i.postimg.cc/qvmvtnrG/5377619498266988825-120.jpg", date: "2026-02-03" },
+        { title: "أسعار العشب الصناعي في الأحساء 2026", excerpt: "تحديث أسعار العشب الصناعي بأنواعه المختلفة في المنطقة الشرقية.", img: "https://i.postimg.cc/dVWV7dF6/5377619498266988826-121.jpg", date: "2026-02-01" },
+        { title: "تصميم حدائق الفلل الكبيرة", excerpt: "أفكار لتصميم حدائق الفلل الواسعة مع تخصيص مناطق للعب والاسترخاء.", img: "https://i.postimg.cc/Z5f593mV/5377619498266988827-121.jpg", date: "2026-01-28" },
+        { title: "عشب صناعي مقاوم للمسبح", excerpt: "أفضل أنواع العشب الصناعي الذي يتحمل الرطوبة العالية حول المسابح.", img: "https://i.postimg.cc/zGDfX7sM/5377619498266988828-121.jpg", date: "2026-01-25" },
+        { title: "إضاءات أرضية للممرات", excerpt: "تصاميم إضاءة أرضية لتحديد المسارات وإضافة جو ساحر للحديقة.", img: "https://i.postimg.cc/Vk7kSMwR/5377619498266988829-121.jpg", date: "2026-01-22" },
+        { title: "كيف تجعل حديقتك صديقة للبيئة؟", excerpt: "استخدام العشب الصناعي لتوفير المياه وتقليل استهلاكها في ري النباتات.", img: "https://i.postimg.cc/6pHp7RKj/5377619498266988834-121.jpg", date: "2026-01-20" },
+        { title: "أفكار حدائق صغيرة للمساحات المحدودة", excerpt: "تصاميم ذكية للحدائق الصغيرة تزيد من المساحة وتضفي جمالاً.", img: "https://i.postimg.cc/CxvxZD06/5377619498266988835-121.jpg", date: "2026-01-18" },
+        { title: "تنسيق حدائق باللمسات العربية", excerpt: "إضافة عناصر تراثية عربية للحدائق كالنخيل والمشبات والجلسات العربية.", img: "https://i.postimg.cc/JzTzyJ8g/5377619498266988836-121.jpg", date: "2026-01-15" },
+        { title: "مشاريع تنسيق حدائق منفذة", excerpt: "صور لأحدث مشاريع تنسيق الحدائق المنفذة في الأحساء.", img: "https://i.postimg.cc/CxvxZD02/5377619498266988837-121.jpg", date: "2026-01-12" },
+        { title: "أسئلة شائعة عن العشب الصناعي", excerpt: "إجابات عن أكثر الأسئلة شيوعاً حول العشب الصناعي وتركيبه.", img: "https://i.postimg.cc/NjNjyTtS/5377619498266988838-121.jpg", date: "2026-01-10" },
+        { title: "نصائح لشراء عشب صناعي عالي الجودة", excerpt: "كيف تفرق بين العشب الصناعي الجيد والرديء قبل الشراء.", img: "https://i.postimg.cc/CxvxZD09/5377619498266988839-121.jpg", date: "2026-01-08" },
+        { title: "تصميم حدائق بالفيديو", excerpt: "شاهد كيفية تنفيذ مشاريع تنسيق الحدائق خطوة بخطوة.", img: "https://i.postimg.cc/YCXC4g7X/5377619498266988840-121.jpg", date: "2026-01-05" }
+    ];
+
     const grid = document.getElementById('gallery-grid');
     
     images.forEach((image, index) => {
@@ -597,6 +770,31 @@
         grid.appendChild(card);
     });
 
+    // إنشاء قسم الـ 20 مقالة
+    const articlesGrid = document.getElementById('articles-grid');
+    if (articlesGrid) {
+        articlesData.forEach(article => {
+            const card = document.createElement('div');
+            card.className = 'article-card';
+            const dateObj = new Date(article.date);
+            const arabicDate = dateObj.toLocaleDateString('ar-SA', { year: 'numeric', month: 'short', day: 'numeric' });
+            card.innerHTML = `
+                <div class="article-image">
+                    <img src="${article.img}" alt="${article.title}" loading="lazy">
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title"><a href="#">${article.title}</a></h3>
+                    <div class="article-meta">
+                        <span><i class="fas fa-calendar-alt"></i> ${arabicDate}</span>
+                    </div>
+                    <p class="article-excerpt">${article.excerpt}</p>
+                    <a href="#" class="read-more">قراءة المزيد</a>
+                </div>
+            `;
+            articlesGrid.appendChild(card);
+        });
+    }
+
     // حماية إضافية للصور
     document.querySelectorAll('.image-container').forEach(container => {
         container.addEventListener('contextmenu', (e) => e.preventDefault());
@@ -608,4 +806,4 @@
 
 <!-- تم إزالة النص المخفي واستبداله بقسم الكلمات المفتاحية المرئي -->
 </body>
-    </html>
+</html>
