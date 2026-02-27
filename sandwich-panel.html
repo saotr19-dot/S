@@ -355,6 +355,107 @@
             border-color: #E86A33;
         }
 
+        /* قسم المقالات الجديد - أسفل الصفحة */
+        .articles-section {
+            margin-top: 60px;
+            padding: 40px 20px;
+            background: #fff;
+            border-radius: 40px 40px 0 0;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
+        }
+        .articles-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        @media (min-width: 640px) {
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .articles-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        .article-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(232,106,51,0.15);
+            border-color: #E86A33;
+        }
+        .article-image {
+            height: 180px;
+            overflow: hidden;
+        }
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+        .article-card:hover .article-image img {
+            transform: scale(1.05);
+        }
+        .article-content {
+            padding: 20px 15px;
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0A1929;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .article-title a {
+            color: #0A1929;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .article-title a:hover {
+            color: #E86A33;
+        }
+        .article-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-bottom: 10px;
+        }
+        .article-meta i {
+            color: #E86A33;
+            margin-left: 5px;
+        }
+        .article-excerpt {
+            font-size: 0.9rem;
+            color: #334155;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .read-more {
+            display: inline-block;
+            background: #E86A33;
+            color: #0A1929;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .read-more:hover {
+            background: #c04e2b;
+            color: #fff;
+        }
+
         /* الأزرار العائمة - محدثة برقم الهاتف الجديد */
         .float-btn {
             position: fixed;
@@ -393,6 +494,30 @@
             margin-top: 40px;
             width: 100%;
             font-size: 0.95rem;
+        }
+        /* قسم روابط سريعة للفهرسة */
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 40px;
+        }
+        .quick-links a {
+            color: #E86A33;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            border-radius: 20px;
+            background: rgba(232,106,51,0.1);
+            transition: 0.3s;
+        }
+        .quick-links a:hover {
+            background: #E86A33;
+            color: #0A1929;
         }
         .social-links {
             display: flex;
@@ -493,15 +618,39 @@
     </div>
 </div>
 
+<!-- ===== قسم المقالات الجديد (20 مقالة) ===== -->
+<div class="articles-section">
+    <div class="container">
+        <h2 class="section-title">آخر المقالات</h2>
+        <div class="articles-grid" id="articles-grid"></div>
+    </div>
+</div>
+
 <!-- الأزرار العائمة برقم الهاتف الجديد 0544459478 -->
 <a href="tel:0544459478" class="float-btn phone" title="اتصل بنا"><i class="fas fa-phone-alt"></i></a>
 <a href="https://wa.me/966544459478?text=السلام%20عليكم%20أريد%20استفسارًا%20عن%20غرف%20السندويش%20بنل%202026" target="_blank" class="float-btn whatsapp" title="واتساب"><i class="fab fa-whatsapp"></i></a>
 
-<!-- تذييل مع روابط التواصل المحدّثة -->
+<!-- تذييل مع روابط التواصل المحدّثة وإضافة روابط سريعة للفهرسة -->
 <footer>
     <p>جميع الحقوق محفوظة © 2026 مظلات سواتر برجولات الخليج – الأحساء</p>
     <p>الهفوف - المبرز - العيون - الجفر - المنيزلة</p>
-    <!-- روابط التواصل الاجتماعي المحدّثة -->
+    
+    <!-- قسم روابط سريعة (للفهرسة) -->
+    <div class="quick-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="berjolat.html">برجولات</a>
+        <a href="hadayeq.html">تنسيق حدائق</a>
+        <a href="khayam.html">بيوت شعر</a>
+        <a href="sawater.html">سواتر</a>
+        <a href="mazlat-lksan.html">مظلات لكسان</a>
+        <a href="sandwich-panel.html">ساندوتش بانل</a>
+        <a href="mazlat-sayarat.html">مظلات سيارات</a>
+        <a href="decor.html">ديكورات</a>
+        <a href="qarmid.html">قرميد</a>
+        <a href="hangar.html">هناجر</a>
+        <a href="mashabat.html">مشبات</a>
+    </div>
+
     <div class="social-links">
         <a href="https://www.instagram.com/almiz_alaat?igsh=MXVuMmx1dngwaWJyMw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://www.tiktok.com/@user9638160751825?_r=1&_t=ZS-94CiF4wkfSu" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
@@ -511,7 +660,7 @@
     <div class="designer">تصميم <span>سليمان الحكمي</span> 0551987351</div>
 </footer>
 
-<!-- JavaScript لإنشاء البطاقات (تم تعديل العنوان ليكون "تصميم 2026") -->
+<!-- JavaScript لإنشاء البطاقات والمقالات -->
 <script>
     // قائمة بجميع صور غرف السندويش بنل
     const images = [
@@ -550,6 +699,30 @@
         { text: "أفضل غرف سندويش بنل في الأحساء، جودة وتركيب احترافي.", client: "إبراهيم العلي - الصناعية" }
     ];
 
+    // قائمة الـ 20 مقالة حول غرف السندويش بنل
+    const articlesData = [
+        { title: "كل ما تريد معرفته عن غرف السندويش بنل", excerpt: "دليل شامل عن غرف الساندوتش بانل: أنواعها، مميزاتها، وأسعارها في الأحساء.", img: "https://i.postimg.cc/x1ns4JWG/096549a75e0139878c670e2f3dbfb857-1.webp", date: "2026-02-25" },
+        { title: "الفرق بين سندويش بنل والشينكو", excerpt: "مقارنة تفصيلية بين ألواح السندويش بنل وألواح الشينكو من حيث العزل والمتانة.", img: "https://i.postimg.cc/t4prMZLr/5285107341525191573-120.jpg", date: "2026-02-22" },
+        { title: "كم تكلفة غرفة سندويش بنل في الأحساء 2026؟", excerpt: "تقديرات تكلفة غرف السندويش بنل حسب المساحة والمواصفات.", img: "https://i.postimg.cc/kgqjp6kY/5285107341525191574-121.jpg", date: "2026-02-20" },
+        { title: "مميزات العزل الحراري في سندويش بنل", excerpt: "كيف توفر ألواح السندويش بنل عزلًا حراريًا ممتازًا للمستودعات والغرف.", img: "https://i.postimg.cc/8zNy0Jq3/5285107341525191575-120.jpg", date: "2026-02-18" },
+        { title: "غرف سندويش بنل للمزارع", excerpt: "استخدامات غرف السندويش بنل في المزارع كغرف عمال ومخازن للمعدات.", img: "https://i.postimg.cc/T3fk4LZs/5285107341525191576-119.jpg", date: "2026-02-15" },
+        { title: "تركيب غرف سندويش بنل: خطوة بخطوة", excerpt: "مراحل تركيب غرفة السندويش بنل من الأساس إلى التشطيب.", img: "https://i.postimg.cc/4xs8S7rP/5285107341525191581-121.jpg", date: "2026-02-12" },
+        { title: "ملاحق منازل بسندويش بنل", excerpt: "تصاميم ملاحق خارجية فاخرة للمنازل باستخدام ألواح السندويش بنل.", img: "https://i.postimg.cc/bwp6BDKL/5285107341525191586-121.jpg", date: "2026-02-10" },
+        { title: "مستودعات تخزين جاهزة", excerpt: "مستودعات سريعة التركيب للاستخدامات التجارية والصناعية.", img: "https://i.postimg.cc/pLR06hgG/5285107341525191587-119.jpg", date: "2026-02-08" },
+        { title: "عزل صوتي باستخدام سندويش بنل", excerpt: "كيف تساعد ألواح السندويش بنل في عزل الصوت داخل الغرف.", img: "https://i.postimg.cc/W1T9HFQX/5285107341525191588-121.jpg", date: "2026-02-05" },
+        { title: "غرف عمال جاهزة للمشاريع", excerpt: "حلول سكن العمال بغرف سندويش بنل سريعة التركيب ومنخفضة التكلفة.", img: "https://i.postimg.cc/GmdM58Zj/5361556363529621861-121.jpg", date: "2026-02-03" },
+        { title: "سندويش بنل مقاوم للحريق", excerpt: "مواصفات الألواح المقاومة للحريق واستخداماتها في المنشآت الحساسة.", img: "https://i.postimg.cc/Bn4hVLdg/5361556363529621862-121.jpg", date: "2026-02-01" },
+        { title: "أحجام وأشكال غرف السندويش بنل", excerpt: "المقاسات القياسية والتصاميم المتاحة لغرف السندويش بنل.", img: "https://i.postimg.cc/SxkZv2wg/5361556363529621863-119.jpg", date: "2026-01-28" },
+        { title: "صيانة وتنظيف غرف السندويش بنل", excerpt: "نصائح للحفاظ على غرف السندويش بنل نظيفة ومعمرة.", img: "https://i.postimg.cc/Bn4hVLdH/67b966b39e48ee445580ada4f5ae85bd.webp", date: "2026-01-25" },
+        { title: "سندويش بنل للاستخدامات الصناعية", excerpt: "تطبيقات السندويش بنل في المصانع والمستودعات الصناعية.", img: "https://i.postimg.cc/7ZwBWGpg/7473a61331bc106d564b6448c885b3c4.webp", date: "2026-01-22" },
+        { title: "تكييف غرف السندويش بنل", excerpt: "كيفية تركيب أنظمة التكييف في غرف السندويش بنل.", img: "https://i.postimg.cc/zXnt7SPp/e6731f238a5e8cf842ae21a2d1e3b8fa.webp", date: "2026-01-20" },
+        { title: "أسئلة شائعة عن غرف السندويش بنل", excerpt: "إجابات عن أكثر الأسئلة شيوعاً حول شراء وتركيب السندويش بنل.", img: "https://i.postimg.cc/JzMT2D95/IMG-20260118-WA0027.jpg", date: "2026-01-18" },
+        { title: "مشاريع غرف سندويش بنل منفذة", excerpt: "صور لأحدث مشاريع غرف السندويش بنل المنفذة في الأحساء.", img: "https://i.postimg.cc/dVwWxkzG/trkyb-sandwtsh-banl-24.jpg", date: "2026-01-15" },
+        { title: "مقارنة بين السندويش بنل والبناء التقليدي", excerpt: "أيهما أفضل: غرف السندويش بنل أم البناء بالطوب؟ تحليل شامل.", img: "https://i.postimg.cc/15pCBcYB/swr-ghrf-sandwtsh-bnl.jpg", date: "2026-01-12" },
+        { title: "نصائح قبل شراء غرفة سندويش بنل", excerpt: "دليل شراء شامل لتختار أفضل غرفة سندويش بنل تناسب احتياجك.", img: "https://i.postimg.cc/Kvnqfrs9/mqawl-trkyb-sandwtsh-banl-38011403.jpg", date: "2026-01-10" },
+        { title: "أفضل أنواع سندويش بنل في السعودية", excerpt: "تعرف على أفضل ماركات ألواح السندويش بنل المتوفرة في السوق السعودي.", img: "https://i.postimg.cc/x1ns4JWG/096549a75e0139878c670e2f3dbfb857-1.webp", date: "2026-01-08" }
+    ];
+
     const grid = document.getElementById('gallery-grid');
     
     images.forEach((image, index) => {
@@ -578,6 +751,31 @@
         `;
         grid.appendChild(card);
     });
+
+    // إنشاء قسم الـ 20 مقالة
+    const articlesGrid = document.getElementById('articles-grid');
+    if (articlesGrid) {
+        articlesData.forEach(article => {
+            const card = document.createElement('div');
+            card.className = 'article-card';
+            const dateObj = new Date(article.date);
+            const arabicDate = dateObj.toLocaleDateString('ar-SA', { year: 'numeric', month: 'short', day: 'numeric' });
+            card.innerHTML = `
+                <div class="article-image">
+                    <img src="${article.img}" alt="${article.title}" loading="lazy">
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title"><a href="#">${article.title}</a></h3>
+                    <div class="article-meta">
+                        <span><i class="fas fa-calendar-alt"></i> ${arabicDate}</span>
+                    </div>
+                    <p class="article-excerpt">${article.excerpt}</p>
+                    <a href="#" class="read-more">قراءة المزيد</a>
+                </div>
+            `;
+            articlesGrid.appendChild(card);
+        });
+    }
 
     // حماية إضافية للصور
     document.querySelectorAll('.image-container').forEach(container => {
