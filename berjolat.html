@@ -363,6 +363,30 @@
         .social-links a:hover {
             color: #E86A33;
         }
+        /* قسم روابط سريعة للفهرسة - إضافة جديدة */
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 40px;
+        }
+        .quick-links a {
+            color: #E86A33;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            border-radius: 20px;
+            background: rgba(232,106,51,0.1);
+            transition: 0.3s;
+        }
+        .quick-links a:hover {
+            background: #E86A33;
+            color: #0A1929;
+        }
         .designer {
             margin-top: 12px;
             font-size: 0.8rem;
@@ -426,10 +450,27 @@
 <a href="tel:0544459478" class="float-btn phone" title="اتصل بنا"><i class="fas fa-phone-alt"></i></a>
 <a href="https://wa.me/966544459478?text=السلام%20عليكم%20أريد%20استفسارًا%20عن%20البرجولات" target="_blank" class="float-btn whatsapp" title="واتساب"><i class="fab fa-whatsapp"></i></a>
 
-<!-- تذييل مع روابط التواصل المحدّثة -->
+<!-- تذييل مع روابط التواصل المحدّثة وإضافة روابط سريعة للفهرسة -->
 <footer>
     <p>جميع الحقوق محفوظة © 2026 مظلات سواتر برجولات الخليج – الأحساء</p>
     <p>الهفوف - المبرز - العيون - الجفر - المنيزلة</p>
+    
+    <!-- قسم روابط سريعة (للفهرسة) -->
+    <div class="quick-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="berjolat.html">برجولات</a>
+        <a href="hadayeq.html">تنسيق حدائق</a>
+        <a href="khayam.html">بيوت شعر</a>
+        <a href="sawater.html">سواتر</a>
+        <a href="mazlat-lksan.html">مظلات لكسان</a>
+        <a href="sandwich-panel.html">ساندوتش بانل</a>
+        <a href="mazlat-sayarat.html">مظلات سيارات</a>
+        <a href="decor.html">ديكورات</a>
+        <a href="qarmid.html">قرميد</a>
+        <a href="hangar.html">هناجر</a>
+        <a href="mashabat.html">مشبات</a>
+    </div>
+
     <div class="social-links">
         <a href="https://www.instagram.com/almiz_alaat?igsh=MXVuMmx1dngwaWJyMw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://www.tiktok.com/@user9638160751825?_r=1&_t=ZS-94CiF4wkfSu" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
