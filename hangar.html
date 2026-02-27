@@ -372,6 +372,107 @@
             border-color: #E86A33;
         }
 
+        /* قسم المقالات الجديد - أسفل الصفحة */
+        .articles-section {
+            margin-top: 60px;
+            padding: 40px 20px;
+            background: #fff;
+            border-radius: 40px 40px 0 0;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
+        }
+        .articles-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        @media (min-width: 640px) {
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .articles-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        .article-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(232,106,51,0.15);
+            border-color: #E86A33;
+        }
+        .article-image {
+            height: 180px;
+            overflow: hidden;
+        }
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+        .article-card:hover .article-image img {
+            transform: scale(1.05);
+        }
+        .article-content {
+            padding: 20px 15px;
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0A1929;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .article-title a {
+            color: #0A1929;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .article-title a:hover {
+            color: #E86A33;
+        }
+        .article-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-bottom: 10px;
+        }
+        .article-meta i {
+            color: #E86A33;
+            margin-left: 5px;
+        }
+        .article-excerpt {
+            font-size: 0.9rem;
+            color: #334155;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .read-more {
+            display: inline-block;
+            background: #E86A33;
+            color: #0A1929;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .read-more:hover {
+            background: #c04e2b;
+            color: #fff;
+        }
+
         /* الأزرار العائمة - محدثة برقم الهاتف الجديد */
         .float-btn {
             position: fixed;
@@ -424,6 +525,32 @@
         @keyframes rotate {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
+        }
+        /* قسم روابط سريعة للفهرسة */
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        .quick-links a {
+            color: #E86A33;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            border-radius: 20px;
+            background: rgba(232,106,51,0.1);
+            transition: 0.3s;
+        }
+        .quick-links a:hover {
+            background: #E86A33;
+            color: #0A1929;
         }
         .social-links {
             display: flex;
@@ -523,15 +650,39 @@
     </div>
 </div>
 
+<!-- ===== قسم المقالات الجديد (20 مقالة) ===== -->
+<div class="articles-section">
+    <div class="container">
+        <h2 class="section-title">آخر المقالات</h2>
+        <div class="articles-grid" id="articles-grid"></div>
+    </div>
+</div>
+
 <!-- الأزرار العائمة برقم الهاتف الجديد 0544459478 -->
 <a href="tel:0544459478" class="float-btn phone" title="اتصل بنا"><i class="fas fa-phone-alt"></i></a>
 <a href="https://wa.me/966544459478?text=السلام%20عليكم%20أريد%20استفسارًا%20عن%20الهناجر%20والمستودعات%202026" target="_blank" class="float-btn whatsapp" title="واتساب"><i class="fab fa-whatsapp"></i></a>
 
-<!-- تذييل مع روابط التواصل المحدّثة -->
+<!-- تذييل مع روابط التواصل المحدّثة وإضافة روابط سريعة للفهرسة -->
 <footer>
     <p>جميع الحقوق محفوظة © 2026 مظلات سواتر برجولات الخليج – الأحساء</p>
     <p>الهفوف - المبرز - العيون - الجفر - المنيزلة</p>
-    <!-- روابط التواصل الاجتماعي المحدّثة -->
+    
+    <!-- قسم روابط سريعة (للفهرسة) -->
+    <div class="quick-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="berjolat.html">برجولات</a>
+        <a href="hadayeq.html">تنسيق حدائق</a>
+        <a href="khayam.html">بيوت شعر</a>
+        <a href="sawater.html">سواتر</a>
+        <a href="mazlat-lksan.html">مظلات لكسان</a>
+        <a href="sandwich-panel.html">ساندوتش بانل</a>
+        <a href="mazlat-sayarat.html">مظلات سيارات</a>
+        <a href="decor.html">ديكورات</a>
+        <a href="qarmid.html">قرميد</a>
+        <a href="hangar.html">هناجر</a>
+        <a href="mashabat.html">مشبات</a>
+    </div>
+
     <div class="social-links">
         <a href="https://www.instagram.com/almiz_alaat?igsh=MXVuMmx1dngwaWJyMw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://www.tiktok.com/@user9638160751825?_r=1&_t=ZS-94CiF4wkfSu" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
@@ -541,7 +692,7 @@
     <div class="designer">تصميم <span>سليمان الحكمي</span> 0551987351</div>
 </footer>
 
-<!-- JavaScript لإنشاء البطاقات (تم تعديل العنوان ليكون "تصميم 2026") -->
+<!-- JavaScript لإنشاء البطاقات والمقالات -->
 <script>
     // قائمة بجميع صور الهناجر والمستودعات
     const images = [
@@ -574,6 +725,30 @@
         { text: "سرعة في التنفيذ ودقة في التفاصيل، شكراً لكم.", client: "عبدالرحمن المطوع - المبرز" }
     ];
 
+    // قائمة الـ 20 مقالة حول الهناجر والمستودعات
+    const articlesData = [
+        { title: "أفضل أنواع الهناجر الحديدية للمصانع", excerpt: "دليلك الشامل لاختيار الهنجر المناسب لمصنعك، مع نصائح حول الهيكل والتغطية.", img: "https://i.postimg.cc/GmjsXHC5/5285107341525191572-120.jpg", date: "2026-02-25" },
+        { title: "مقارنة بين شينكو وساندوتش بانل للهناجر", excerpt: "تعرف على الفروقات بين تغطية الشينكو والساندوتش بانل للهناجر والمستودعات.", img: "https://i.postimg.cc/rw9tfKk3/5285107341525191584-121.jpg", date: "2026-02-22" },
+        { title: "كيف تصمم مستودع تخزين مثالي؟", excerpt: "أساسيات تصميم المستودعات من حيث المساحة والارتفاع والتهوية والإضاءة.", img: "https://i.postimg.cc/MpYj9vSr/5348356309826342745-120.jpg", date: "2026-02-20" },
+        { title: "هناجر زراعية: استخدامات متعددة", excerpt: "استخدامات الهناجر في القطاع الزراعي لتخزين المعدات والمحاصيل.", img: "https://i.postimg.cc/Njxrd5cn/5348356309826342746-120.jpg", date: "2026-02-18" },
+        { title: "تكلفة بناء هنجر في الأحساء 2026", excerpt: "تقديرات تكلفة بناء الهناجر حسب المساحة والمواد المستخدمة.", img: "https://i.postimg.cc/pLBnspHc/5348356309826342747-120.jpg", date: "2026-02-15" },
+        { title: "عزل حراري للهناجر والمستودعات", excerpt: "أفضل طرق العزل الحراري لتقليل استهلاك التبريد في الهناجر.", img: "https://i.postimg.cc/JzQBpGLp/5348356309826342748-120.jpg", date: "2026-02-12" },
+        { title: "هناجر جاهزة سريعة التركيب", excerpt: "مميزات الهناجر الجاهزة وسرعة تنفيذها مقارنة بالبناء التقليدي.", img: "https://i.postimg.cc/pLBnspHk/5348356309826342749-120.jpg", date: "2026-02-10" },
+        { title: "تصاميم حديثة للهناجر الصناعية", excerpt: "أحدث التصاميم المعمارية للهناجر التي تجمع بين الوظيفة والجمال.", img: "https://i.postimg.cc/Cx4fczgv/5348356309826342751-120.jpg", date: "2026-02-08" },
+        { title: "مستودعات تخزين المواد الغذائية", excerpt: "اشتراطات خاصة لمستودعات تخزين الأغذية من حيث النظافة والعزل.", img: "https://i.postimg.cc/6phGMyXd/5449855625505476562-121.jpg", date: "2026-02-05" },
+        { title: "أبواب كبيرة للهناجر والمستودعات", excerpt: "أنواع الأبواب المناسبة للهناجر: أبواب رول، أبواب منزلقة، وأبواب سريعة.", img: "https://i.postimg.cc/P5M8SPjy/5449855625505476563-121.jpg", date: "2026-02-03" },
+        { title: "هناجر مقاومة للعوامل الجوية", excerpt: "كيف تحمي هنجرك من الرياح والأمطار والرطوبة في المنطقة الشرقية.", img: "https://i.postimg.cc/JzQBpGLN/5449855625505476564-121.jpg", date: "2026-02-01" },
+        { title: "أنظمة تهوية للهناجر", excerpt: "أفضل حلول التهوية للحفاظ على جودة الهواء داخل الهناجر المغلقة.", img: "https://i.postimg.cc/qvGC1zTL/5449855625505476565-121.jpg", date: "2026-01-28" },
+        { title: "مستودعات جاهزة للمعدات الثقيلة", excerpt: "تصاميم خاصة لمستودعات تخزين الآليات والمعدات الثقيلة.", img: "https://i.postimg.cc/RZTngNBX/5449855625505476566-121.jpg", date: "2026-01-25" },
+        { title: "هناجر مصانع: خطوات التنفيذ", excerpt: "مراحل تنفيذ هنجر المصنع من التصميم إلى التسليم.", img: "https://i.postimg.cc/VkFbKd8W/5449855625505476567-121.jpg", date: "2026-01-22" },
+        { title: "أسعار الشينكو في الأحساء 2026", excerpt: "تحديث أسعار ألواح الشينكو المستخدمة في تغطية الهناجر.", img: "https://i.postimg.cc/Hkt76Vg4/5449855625505476568-121.jpg", date: "2026-01-20" },
+        { title: "هناجر متعددة الطوابق", excerpt: "إمكانية بناء هناجر متعددة الطوابق لتوفير المساحة.", img: "https://i.postimg.cc/GmjsXHC5/5285107341525191572-120.jpg", date: "2026-01-18" },
+        { title: "تراخيص بناء الهناجر في الأحساء", excerpt: "دليل الإجراءات والتراخيص اللازمة لبناء هنجر في المنطقة.", img: "https://i.postimg.cc/rw9tfKk3/5285107341525191584-121.jpg", date: "2026-01-15" },
+        { title: "مشاريع هناجر منفذة", excerpt: "صور لأحدث مشاريع الهناجر المنفذة في الأحساء والمنطقة الشرقية.", img: "https://i.postimg.cc/MpYj9vSr/5348356309826342745-120.jpg", date: "2026-01-12" },
+        { title: "أسئلة شائعة عن الهناجر", excerpt: "إجابات عن أكثر الأسئلة شيوعاً حول بناء وتصميم الهناجر.", img: "https://i.postimg.cc/Njxrd5cn/5348356309826342746-120.jpg", date: "2026-01-10" },
+        { title: "صيانة الهناجر والمستودعات", excerpt: "نصائح للحفاظ على هنجرك وإطالة عمره الافتراضي.", img: "https://i.postimg.cc/pLBnspHc/5348356309826342747-120.jpg", date: "2026-01-08" }
+    ];
+
     const grid = document.getElementById('gallery-grid');
     
     images.forEach((image, index) => {
@@ -602,6 +777,31 @@
         `;
         grid.appendChild(card);
     });
+
+    // إنشاء قسم الـ 20 مقالة
+    const articlesGrid = document.getElementById('articles-grid');
+    if (articlesGrid) {
+        articlesData.forEach(article => {
+            const card = document.createElement('div');
+            card.className = 'article-card';
+            const dateObj = new Date(article.date);
+            const arabicDate = dateObj.toLocaleDateString('ar-SA', { year: 'numeric', month: 'short', day: 'numeric' });
+            card.innerHTML = `
+                <div class="article-image">
+                    <img src="${article.img}" alt="${article.title}" loading="lazy">
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title"><a href="#">${article.title}</a></h3>
+                    <div class="article-meta">
+                        <span><i class="fas fa-calendar-alt"></i> ${arabicDate}</span>
+                    </div>
+                    <p class="article-excerpt">${article.excerpt}</p>
+                    <a href="#" class="read-more">قراءة المزيد</a>
+                </div>
+            `;
+            articlesGrid.appendChild(card);
+        });
+    }
 
     // حماية إضافية للصور
     document.querySelectorAll('.image-container').forEach(container => {
