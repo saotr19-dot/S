@@ -355,6 +355,107 @@
             border-color: #E86A33;
         }
 
+        /* قسم المقالات الجديد - أسفل الصفحة */
+        .articles-section {
+            margin-top: 60px;
+            padding: 40px 20px;
+            background: #fff;
+            border-radius: 40px 40px 0 0;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
+        }
+        .articles-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        @media (min-width: 640px) {
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .articles-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        .article-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(232,106,51,0.15);
+            border-color: #E86A33;
+        }
+        .article-image {
+            height: 180px;
+            overflow: hidden;
+        }
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+        .article-card:hover .article-image img {
+            transform: scale(1.05);
+        }
+        .article-content {
+            padding: 20px 15px;
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0A1929;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .article-title a {
+            color: #0A1929;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .article-title a:hover {
+            color: #E86A33;
+        }
+        .article-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-bottom: 10px;
+        }
+        .article-meta i {
+            color: #E86A33;
+            margin-left: 5px;
+        }
+        .article-excerpt {
+            font-size: 0.9rem;
+            color: #334155;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .read-more {
+            display: inline-block;
+            background: #E86A33;
+            color: #0A1929;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .read-more:hover {
+            background: #c04e2b;
+            color: #fff;
+        }
+
         /* الأزرار العائمة - محدثة برقم الهاتف الجديد */
         .float-btn {
             position: fixed;
@@ -393,6 +494,30 @@
             margin-top: 40px;
             width: 100%;
             font-size: 0.95rem;
+        }
+        /* قسم روابط سريعة للفهرسة */
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 40px;
+        }
+        .quick-links a {
+            color: #E86A33;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            border-radius: 20px;
+            background: rgba(232,106,51,0.1);
+            transition: 0.3s;
+        }
+        .quick-links a:hover {
+            background: #E86A33;
+            color: #0A1929;
         }
         .social-links {
             display: flex;
@@ -488,15 +613,39 @@
     </div>
 </div>
 
+<!-- ===== قسم المقالات الجديد (20 مقالة) ===== -->
+<div class="articles-section">
+    <div class="container">
+        <h2 class="section-title">آخر المقالات</h2>
+        <div class="articles-grid" id="articles-grid"></div>
+    </div>
+</div>
+
 <!-- الأزرار العائمة برقم الهاتف الجديد 0544459478 -->
 <a href="tel:0544459478" class="float-btn phone" title="اتصل بنا"><i class="fas fa-phone-alt"></i></a>
 <a href="https://wa.me/966544459478?text=السلام%20عليكم%20أريد%20استفسارًا%20عن%20المظلات%202026" target="_blank" class="float-btn whatsapp" title="واتساب"><i class="fab fa-whatsapp"></i></a>
 
-<!-- تذييل مع روابط التواصل المحدّثة -->
+<!-- تذييل مع روابط التواصل المحدّثة وإضافة روابط سريعة للفهرسة -->
 <footer>
     <p>جميع الحقوق محفوظة © 2026 مظلات سواتر برجولات الخليج – الأحساء</p>
     <p>الهفوف - المبرز - العيون - الجفر - المنيزلة</p>
-    <!-- روابط التواصل الاجتماعي المحدّثة -->
+    
+    <!-- قسم روابط سريعة (للفهرسة) -->
+    <div class="quick-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="berjolat.html">برجولات</a>
+        <a href="hadayeq.html">تنسيق حدائق</a>
+        <a href="khayam.html">بيوت شعر</a>
+        <a href="sawater.html">سواتر</a>
+        <a href="mazlat-lksan.html">مظلات لكسان</a>
+        <a href="sandwich-panel.html">ساندوتش بانل</a>
+        <a href="mazlat-sayarat.html">مظلات سيارات</a>
+        <a href="decor.html">ديكورات</a>
+        <a href="qarmid.html">قرميد</a>
+        <a href="hangar.html">هناجر</a>
+        <a href="mashabat.html">مشبات</a>
+    </div>
+
     <div class="social-links">
         <a href="https://www.instagram.com/almiz_alaat?igsh=MXVuMmx1dngwaWJyMw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://www.tiktok.com/@user9638160751825?_r=1&_t=ZS-94CiF4wkfSu" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
@@ -506,7 +655,7 @@
     <div class="designer">تصميم <span>سليمان الحكمي</span> 0551987351</div>
 </footer>
 
-<!-- JavaScript لإنشاء البطاقات (تم تعديل العنوان ليكون "تصميم 2026") -->
+<!-- JavaScript لإنشاء البطاقات والمقالات -->
 <script>
     // قائمة بجميع صور المظلات (كما هي)
     const images = [
@@ -648,6 +797,30 @@
         { text: "أفضل مظلات في الأحساء، جودة عالية وتعامل راقي.", client: "إبراهيم العلي - الصناعية" }
     ];
 
+    // قائمة الـ 20 مقالة حول المظلات
+    const articlesData = [
+        { title: "كل ما تريد معرفته عن مظلات السيارات", excerpt: "دليل شامل عن أنواع مظلات السيارات، المواد المستخدمة، وأسعارها في الأحساء.", img: "https://i.postimg.cc/nLsw4b8X/0157.webp", date: "2026-02-25" },
+        { title: "الفرق بين المظلات الهرمية والمخروطية", excerpt: "مقارنة تفصيلية بين التصميم الهرمي والمخروطي من حيث الشكل والمتانة.", img: "https://i.postimg.cc/8CFnRQ8J/0159.webp", date: "2026-02-22" },
+        { title: "مظلات مسابح: حماية ونظافة", excerpt: "كيف تساعد مظلات المسابح في الحفاظ على نظافة المياه وتقليل التبخر.", img: "https://i.postimg.cc/KYKsPSXR/0164.webp", date: "2026-02-20" },
+        { title: "كم تكلفة مظلة سيارة في الأحساء 2026؟", excerpt: "تقديرات تكلفة مظلات السيارات حسب المساحة والتصميم.", img: "https://i.postimg.cc/HLJPwDGp/0185.webp", date: "2026-02-18" },
+        { title: "مظلات مواقف السيارات للمؤسسات", excerpt: "أفضل حلول تظليل مواقف الشركات والمؤسسات بأحدث التصاميم.", img: "https://i.postimg.cc/0N6HYRgQ/0196.webp", date: "2026-02-15" },
+        { title: "مظلات مدارس: أمان وجودة", excerpt: "مواصفات مظلات المدارس لضمان سلامة الطلاب وجودة التظليل.", img: "https://i.postimg.cc/d07S2PM3/0202.webp", date: "2026-02-12" },
+        { title: "مظلات هرمية للفلل والقصور", excerpt: "تصاميم فاخرة للمظلات الهرمية تضفي جمالاً على المداخل والحدائق.", img: "https://i.postimg.cc/VNSHqQy5/0206.webp", date: "2026-02-10" },
+        { title: "مظلات مخروطية عصرية", excerpt: "أحدث تصاميم المظلات المخروطية التي تجمع بين الوظيفة والجمال.", img: "https://i.postimg.cc/D0hj3SSz/5348356309826342711-121.jpg", date: "2026-02-08" },
+        { title: "مظلات مع إضاءة ليد مخفية", excerpt: "تصاميم مظلات عصرية مع إضاءة ليد تضيف أجواء ساحرة ليلاً.", img: "https://i.postimg.cc/rsTn2DD2/5361556363529621624-120.jpg", date: "2026-02-05" },
+        { title: "مظلات سيارات قوسية", excerpt: "مظلات سيارات بتصميم قوسي أنيق يناسب الفلل الحديثة.", img: "https://i.postimg.cc/NFtJvKKQ/5361556363529621633-120.jpg", date: "2026-02-03" },
+        { title: "عزل حراري باستخدام مظلات PVC", excerpt: "كيف تساعد مظلات PVC في تقليل درجة حرارة السيارات والمسطحات.", img: "https://i.postimg.cc/L5SCFJJM/5361556363529621636-120.jpg", date: "2026-02-01" },
+        { title: "مظلات مواقف متعددة", excerpt: "تصاميم مظلات تغطي عدة سيارات في موقف واحد بتكلفة اقتصادية.", img: "https://i.postimg.cc/gjpSbxxp/5361556363529621688-121.jpg", date: "2026-01-28" },
+        { title: "مظلات مقاومة للرياح", excerpt: "مواصفات المظلات المقاومة للرياح في المنطقة الشرقية.", img: "https://i.postimg.cc/26hctQSk/5361556363529621689-120.jpg", date: "2026-01-25" },
+        { title: "صيانة وتنظيف المظلات", excerpt: "نصائح للحفاظ على مظلتك نظيفة ومعمرة لأطول فترة.", img: "https://i.postimg.cc/8cGKg7j2/5361556363529621690-120.jpg", date: "2026-01-22" },
+        { title: "ألوان المظلات المتوفرة", excerpt: "دليل ألوان المظلات وكيفية اختيار المناسب لديكور منزلك.", img: "https://i.postimg.cc/xCMxZv1T/5361556363529621691-120.jpg", date: "2026-01-20" },
+        { title: "مظلات للحدائق والجلسات الخارجية", excerpt: "استخدامات المظلات في تظليل الجلسات الخارجية وحماية الأثاث.", img: "https://i.postimg.cc/mk4XWPPx/5361556363529621693-121.jpg", date: "2026-01-18" },
+        { title: "أسئلة شائعة عن تركيب المظلات", excerpt: "إجابات عن أكثر الأسئلة شيوعاً حول تركيب وتوريد المظلات.", img: "https://i.postimg.cc/2yYcN11R/5361556363529621696-121.jpg", date: "2026-01-15" },
+        { title: "مشاريع مظلات منفذة في الأحساء", excerpt: "صور لأحدث مشاريع المظلات المنفذة في الهفوف والمبرز والعيون.", img: "https://i.postimg.cc/wvLfrXjH/5361556363529621698-120.jpg", date: "2026-01-12" },
+        { title: "مقارنة بين مظلات القماش واللكسان", excerpt: "أيهما أفضل: مظلات القماش أم اللكسان؟ تحليل مفصل للمزايا.", img: "https://i.postimg.cc/ydcQGm8z/5361556363529621699-120.jpg", date: "2026-01-10" },
+        { title: "نصائح قبل شراء مظلة", excerpt: "دليل شراء شامل لتختار أفضل مظلة تناسب احتياجك.", img: "https://i.postimg.cc/tTWSc34b/5361556363529621700-120.jpg", date: "2026-01-08" }
+    ];
+
     const grid = document.getElementById('gallery-grid');
     
     images.forEach((image, index) => {
@@ -676,6 +849,31 @@
         `;
         grid.appendChild(card);
     });
+
+    // إنشاء قسم الـ 20 مقالة
+    const articlesGrid = document.getElementById('articles-grid');
+    if (articlesGrid) {
+        articlesData.forEach(article => {
+            const card = document.createElement('div');
+            card.className = 'article-card';
+            const dateObj = new Date(article.date);
+            const arabicDate = dateObj.toLocaleDateString('ar-SA', { year: 'numeric', month: 'short', day: 'numeric' });
+            card.innerHTML = `
+                <div class="article-image">
+                    <img src="${article.img}" alt="${article.title}" loading="lazy">
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title"><a href="#">${article.title}</a></h3>
+                    <div class="article-meta">
+                        <span><i class="fas fa-calendar-alt"></i> ${arabicDate}</span>
+                    </div>
+                    <p class="article-excerpt">${article.excerpt}</p>
+                    <a href="#" class="read-more">قراءة المزيد</a>
+                </div>
+            `;
+            articlesGrid.appendChild(card);
+        });
+    }
 
     // حماية إضافية للصور
     document.querySelectorAll('.image-container').forEach(container => {
