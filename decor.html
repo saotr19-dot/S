@@ -355,6 +355,104 @@
             border-color: #E86A33;
         }
 
+        /* قسم المقالات الجديد (بدون صور) */
+        .articles-section {
+            margin-top: 60px;
+            padding: 40px 20px;
+            background: #fff;
+            border-radius: 40px 40px 0 0;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
+        }
+        .articles-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        @media (min-width: 640px) {
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .articles-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        .article-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(232,106,51,0.15);
+            border-color: #E86A33;
+        }
+        .article-icon {
+            background: #0A1929;
+            color: #E86A33;
+            font-size: 2.5rem;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 3px solid #E86A33;
+        }
+        .article-content {
+            padding: 20px 15px;
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0A1929;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .article-title a {
+            color: #0A1929;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .article-title a:hover {
+            color: #E86A33;
+        }
+        .article-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-bottom: 10px;
+        }
+        .article-meta i {
+            color: #E86A33;
+            margin-left: 5px;
+        }
+        .article-excerpt {
+            font-size: 0.9rem;
+            color: #334155;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .read-more {
+            display: inline-block;
+            background: #E86A33;
+            color: #0A1929;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .read-more:hover {
+            background: #c04e2b;
+            color: #fff;
+        }
+
         /* الأزرار العائمة - محدثة برقم الهاتف الجديد */
         .float-btn {
             position: fixed;
@@ -394,7 +492,7 @@
             width: 100%;
             font-size: 0.95rem;
         }
-        /* قسم روابط سريعة للفهرسة - إضافة جديدة */
+        /* قسم روابط سريعة للفهرسة */
         .quick-links {
             display: flex;
             flex-wrap: wrap;
@@ -458,24 +556,17 @@
 <!-- شريط التنقل -->
 <nav>
     <a href="index.html">الرئيسية</a>
-    <a href="#">مظلات</a>
-    <a href="mazlat-sayarat.html">مظلات سيارات</a>
-    <a href="#">soater.com</a>
-    <a href="mazlat-lksan.html">مظلات لكسان</a>
-    <a href="#">مظلات خزانات</a>
-    <a href="hangar.html">هناجر مستودعات</a>
-    <a href="hadayeq.html">تنسيق حدائق</a>
-    <a href="#">مظلات الشد الإنشائي</a>
-    <a href="#">مظلات مسابح</a>
+    <a href="berjolat.html">برجولات</a>
+    <a href="hadayeq.html">حدائق</a>
+    <a href="khayam.html">بيوت شعر</a>
     <a href="sawater.html">سواتر</a>
-    <a href="#">سواتر قماش</a>
-    <a href="#">سواتر شرائح حديد</a>
-    <a href="#">سواتر خشبية</a>
-    <a href="qarmid.html">قرميد</a>
-    <a href="khayam.html">بيوت شعر ملكي</a>
+    <a href="mazlat-lksan.html">مظلات لكسان</a>
     <a href="sandwich-panel.html">ساندوتش بانل</a>
+    <a href="mazlat-sayarat.html">مظلات سيارات</a>
     <a href="decor.html">ديكورات</a>
-    <a href="mashabat.html">مشبات تراثية</a>
+    <a href="qarmid.html">قرميد</a>
+    <a href="hangar.html">هناجر</a>
+    <a href="mashabat.html">مشبات</a>
 </nav>
 
 <!-- عنوان الصفحة - تم تحسين وضوح الخلفية -->
@@ -515,6 +606,14 @@
     </div>
 </div>
 
+<!-- ===== قسم المقالات الجديد (20 مقالة بدون صور) ===== -->
+<div class="articles-section">
+    <div class="container">
+        <h2 class="section-title">آخر المقالات</h2>
+        <div class="articles-grid" id="articles-grid"></div>
+    </div>
+</div>
+
 <!-- الأزرار العائمة برقم الهاتف الجديد 0544459478 -->
 <a href="tel:0544459478" class="float-btn phone" title="اتصل بنا"><i class="fas fa-phone-alt"></i></a>
 <a href="https://wa.me/966544459478?text=السلام%20عليكم%20أريد%20استفسارًا%20عن%20الديكورات%202026" target="_blank" class="float-btn whatsapp" title="واتساب"><i class="fab fa-whatsapp"></i></a>
@@ -549,7 +648,6 @@
     <div class="designer">تصميم <span>سليمان الحكمي</span> 0551987351</div>
 </footer>
 
-<!-- JavaScript لإنشاء البطاقات (تم تعديل العنوان ليكون "تصميم 2026") -->
 <script>
     // قائمة بجميع صور الديكورات
     const images = [
@@ -613,6 +711,30 @@
         { text: "بديل الخشب للمداخل، لمسة جمالية رائعة.", client: "يوسف العلي - المنيزلة" }
     ];
 
+    // بيانات الـ 20 مقالة (بدون صور)
+    const articlesData = [
+        { title: "نصائح لاختيار الديكورات الداخلية المناسبة", excerpt: "دليلك الشامل لاختيار الديكورات المناسبة لمنزلك من حيث المواد والتصميم.", date: "2026-02-25" },
+        { title: "الفرق بين بديل الخشب والخشب الطبيعي", excerpt: "مقارنة تفصيلية بين بديل الخشب والخشب الطبيعي من حيث المتانة والصيانة والتكلفة.", date: "2026-02-22" },
+        { title: "أفكار لتصميم جبس بورد عصري", excerpt: "أحدث تصاميم الجبس بورد للأسقف والجدران التي تضفي فخامة على المنزل.", date: "2026-02-20" },
+        { title: "صبغ بروفايل للواجهات: كل ما تحتاج معرفته", excerpt: "دليل شامل عن صبغ البروفايل: أنواعه، مميزاته، وأسعاره في الأحساء.", date: "2026-02-18" },
+        { title: "كم تكلفة الديكورات الداخلية في الأحساء 2026؟", excerpt: "تقديرات تكلفة الديكورات حسب المساحة والمواد المستخدمة.", date: "2026-02-15" },
+        { title: "سمنت بورد: حلول عصرية للواجهات", excerpt: "مميزات ألواح السمنت بورد واستخداماتها في الديكورات الخارجية.", date: "2026-02-12" },
+        { title: "ديكورات جبس للمجالس العربية", excerpt: "تصاميم جبسية فاخرة تناسب المجالس العربية الأصيلة.", date: "2026-02-10" },
+        { title: "إضاءات ليد مخفية في الديكورات", excerpt: "أفكار مبتكرة لدمج إضاءات اليد في الأسقف والجدران.", date: "2026-02-08" },
+        { title: "دهانات داخلية عصرية", excerpt: "أحدث صيحات الألوان والدهانات للجدران الداخلية.", date: "2026-02-05" },
+        { title: "أسئلة شائعة عن الديكورات", excerpt: "إجابات عن أكثر الأسئلة شيوعاً حول تنفيذ الديكورات.", date: "2026-02-03" },
+        { title: "ديكورات أسقف معلقة", excerpt: "تصاميم أسقف جبسية معلقة تناسب جميع الأذواق.", date: "2026-02-01" },
+        { title: "ديكورات جدران ثلاثية الأبعاد", excerpt: "أفكار لاستخدام الجبس والأخشاب في إضافة عمق للجدران.", date: "2026-01-28" },
+        { title: "ديكورات خارجية للفلل", excerpt: "تصاميم واجهات خارجية باستخدام بديل الخشب والبروفايل.", date: "2026-01-25" },
+        { title: "صيانة وتنظيف الديكورات", excerpt: "نصائح للحفاظ على الديكورات نظيفة ومعمرة لأطول فترة.", date: "2026-01-22" },
+        { title: "مشاريع ديكورات منفذة في الأحساء", excerpt: "صور لأحدث مشاريع الديكورات المنفذة في الهفوف والمبرز والعيون.", date: "2026-01-20" },
+        { title: "ديكورات للمكاتب والشركات", excerpt: "تصاميم ديكورات تناسب المساحات التجارية والمكاتب.", date: "2026-01-18" },
+        { title: "أفضل أنواع الجبس بورد", excerpt: "تعرف على أفضل أنواع الجبس بورد المستخدمة في الديكورات.", date: "2026-01-15" },
+        { title: "مقارنة بين الديكورات الكلاسيكية والعصرية", excerpt: "أيهما يناسب منزلك: الديكورات الكلاسيكية أم العصرية؟ تحليل شامل.", date: "2026-01-12" },
+        { title: "نصائح قبل تنفيذ الديكورات", excerpt: "دليل شامل لتختار أفضل التصاميم والمواد لمنزلك.", date: "2026-01-10" },
+        { title: "اتجاهات الديكورات لعام 2026", excerpt: "أحدث صيحات الديكورات الداخلية والخارجية لعام 2026.", date: "2026-01-08" }
+    ];
+
     const grid = document.getElementById('gallery-grid');
     
     images.forEach((image, index) => {
@@ -641,6 +763,31 @@
         `;
         grid.appendChild(card);
     });
+
+    // إنشاء قسم الـ 20 مقالة
+    const articlesGrid = document.getElementById('articles-grid');
+    if (articlesGrid) {
+        articlesData.forEach(article => {
+            const card = document.createElement('div');
+            card.className = 'article-card';
+            const dateObj = new Date(article.date);
+            const arabicDate = dateObj.toLocaleDateString('ar-SA', { year: 'numeric', month: 'short', day: 'numeric' });
+            card.innerHTML = `
+                <div class="article-icon">
+                    <i class="fas fa-newspaper"></i>
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title"><a href="#">${article.title}</a></h3>
+                    <div class="article-meta">
+                        <span><i class="fas fa-calendar-alt"></i> ${arabicDate}</span>
+                    </div>
+                    <p class="article-excerpt">${article.excerpt}</p>
+                    <a href="#" class="read-more">قراءة المزيد</a>
+                </div>
+            `;
+            articlesGrid.appendChild(card);
+        });
+    }
 
     // حماية إضافية للصور
     document.querySelectorAll('.image-container').forEach(container => {
