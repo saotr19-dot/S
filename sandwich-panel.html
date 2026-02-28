@@ -355,7 +355,7 @@
             border-color: #E86A33;
         }
 
-        /* قسم المقالات الجديد - أسفل الصفحة */
+        /* قسم المقالات الجديد - بدون صور */
         .articles-section {
             margin-top: 60px;
             padding: 40px 20px;
@@ -386,24 +386,21 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             transition: 0.3s;
             border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
         }
         .article-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(232,106,51,0.15);
             border-color: #E86A33;
         }
-        .article-image {
-            height: 180px;
-            overflow: hidden;
-        }
-        .article-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: 0.5s;
-        }
-        .article-card:hover .article-image img {
-            transform: scale(1.05);
+        .article-icon {
+            background: #0A1929;
+            color: #E86A33;
+            font-size: 2.5rem;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 3px solid #E86A33;
         }
         .article-content {
             padding: 20px 15px;
@@ -559,24 +556,17 @@
 <!-- شريط التنقل -->
 <nav>
     <a href="index.html">الرئيسية</a>
-    <a href="#">مظلات</a>
-    <a href="mazlat-sayarat.html">مظلات سيارات</a>
-    <a href="#">soater.com</a>
-    <a href="mazlat-lksan.html">مظلات لكسان</a>
-    <a href="#">مظلات خزانات</a>
-    <a href="hangar.html">هناجر مستودعات</a>
-    <a href="hadayeq.html">تنسيق حدائق</a>
-    <a href="#">مظلات الشد الإنشائي</a>
-    <a href="#">مظلات مسابح</a>
+    <a href="berjolat.html">برجولات</a>
+    <a href="hadayeq.html">حدائق</a>
+    <a href="khayam.html">بيوت شعر</a>
     <a href="sawater.html">سواتر</a>
-    <a href="#">سواتر قماش</a>
-    <a href="#">سواتر شرائح حديد</a>
-    <a href="#">سواتر خشبية</a>
-    <a href="qarmid.html">قرميد</a>
-    <a href="khayam.html">بيوت شعر ملكي</a>
+    <a href="mazlat-lksan.html">مظلات لكسان</a>
     <a href="sandwich-panel.html">ساندوتش بانل</a>
+    <a href="mazlat-sayarat.html">مظلات سيارات</a>
     <a href="decor.html">ديكورات</a>
-    <a href="mashabat.html">مشبات تراثية</a>
+    <a href="qarmid.html">قرميد</a>
+    <a href="hangar.html">هناجر</a>
+    <a href="mashabat.html">مشبات</a>
 </nav>
 
 <!-- عنوان الصفحة - تم تحسين وضوح الخلفية -->
@@ -618,7 +608,7 @@
     </div>
 </div>
 
-<!-- ===== قسم المقالات الجديد (20 مقالة) ===== -->
+<!-- ===== قسم المقالات الجديد (20 مقالة بدون صور) ===== -->
 <div class="articles-section">
     <div class="container">
         <h2 class="section-title">آخر المقالات</h2>
@@ -699,28 +689,28 @@
         { text: "أفضل غرف سندويش بنل في الأحساء، جودة وتركيب احترافي.", client: "إبراهيم العلي - الصناعية" }
     ];
 
-    // قائمة الـ 20 مقالة حول غرف السندويش بنل
+    // قائمة الـ 20 مقالة حول غرف السندويش بنل (بدون صور)
     const articlesData = [
-        { title: "كل ما تريد معرفته عن غرف السندويش بنل", excerpt: "دليل شامل عن غرف الساندوتش بانل: أنواعها، مميزاتها، وأسعارها في الأحساء.", img: "https://i.postimg.cc/x1ns4JWG/096549a75e0139878c670e2f3dbfb857-1.webp", date: "2026-02-25" },
-        { title: "الفرق بين سندويش بنل والشينكو", excerpt: "مقارنة تفصيلية بين ألواح السندويش بنل وألواح الشينكو من حيث العزل والمتانة.", img: "https://i.postimg.cc/t4prMZLr/5285107341525191573-120.jpg", date: "2026-02-22" },
-        { title: "كم تكلفة غرفة سندويش بنل في الأحساء 2026؟", excerpt: "تقديرات تكلفة غرف السندويش بنل حسب المساحة والمواصفات.", img: "https://i.postimg.cc/kgqjp6kY/5285107341525191574-121.jpg", date: "2026-02-20" },
-        { title: "مميزات العزل الحراري في سندويش بنل", excerpt: "كيف توفر ألواح السندويش بنل عزلًا حراريًا ممتازًا للمستودعات والغرف.", img: "https://i.postimg.cc/8zNy0Jq3/5285107341525191575-120.jpg", date: "2026-02-18" },
-        { title: "غرف سندويش بنل للمزارع", excerpt: "استخدامات غرف السندويش بنل في المزارع كغرف عمال ومخازن للمعدات.", img: "https://i.postimg.cc/T3fk4LZs/5285107341525191576-119.jpg", date: "2026-02-15" },
-        { title: "تركيب غرف سندويش بنل: خطوة بخطوة", excerpt: "مراحل تركيب غرفة السندويش بنل من الأساس إلى التشطيب.", img: "https://i.postimg.cc/4xs8S7rP/5285107341525191581-121.jpg", date: "2026-02-12" },
-        { title: "ملاحق منازل بسندويش بنل", excerpt: "تصاميم ملاحق خارجية فاخرة للمنازل باستخدام ألواح السندويش بنل.", img: "https://i.postimg.cc/bwp6BDKL/5285107341525191586-121.jpg", date: "2026-02-10" },
-        { title: "مستودعات تخزين جاهزة", excerpt: "مستودعات سريعة التركيب للاستخدامات التجارية والصناعية.", img: "https://i.postimg.cc/pLR06hgG/5285107341525191587-119.jpg", date: "2026-02-08" },
-        { title: "عزل صوتي باستخدام سندويش بنل", excerpt: "كيف تساعد ألواح السندويش بنل في عزل الصوت داخل الغرف.", img: "https://i.postimg.cc/W1T9HFQX/5285107341525191588-121.jpg", date: "2026-02-05" },
-        { title: "غرف عمال جاهزة للمشاريع", excerpt: "حلول سكن العمال بغرف سندويش بنل سريعة التركيب ومنخفضة التكلفة.", img: "https://i.postimg.cc/GmdM58Zj/5361556363529621861-121.jpg", date: "2026-02-03" },
-        { title: "سندويش بنل مقاوم للحريق", excerpt: "مواصفات الألواح المقاومة للحريق واستخداماتها في المنشآت الحساسة.", img: "https://i.postimg.cc/Bn4hVLdg/5361556363529621862-121.jpg", date: "2026-02-01" },
-        { title: "أحجام وأشكال غرف السندويش بنل", excerpt: "المقاسات القياسية والتصاميم المتاحة لغرف السندويش بنل.", img: "https://i.postimg.cc/SxkZv2wg/5361556363529621863-119.jpg", date: "2026-01-28" },
-        { title: "صيانة وتنظيف غرف السندويش بنل", excerpt: "نصائح للحفاظ على غرف السندويش بنل نظيفة ومعمرة.", img: "https://i.postimg.cc/Bn4hVLdH/67b966b39e48ee445580ada4f5ae85bd.webp", date: "2026-01-25" },
-        { title: "سندويش بنل للاستخدامات الصناعية", excerpt: "تطبيقات السندويش بنل في المصانع والمستودعات الصناعية.", img: "https://i.postimg.cc/7ZwBWGpg/7473a61331bc106d564b6448c885b3c4.webp", date: "2026-01-22" },
-        { title: "تكييف غرف السندويش بنل", excerpt: "كيفية تركيب أنظمة التكييف في غرف السندويش بنل.", img: "https://i.postimg.cc/zXnt7SPp/e6731f238a5e8cf842ae21a2d1e3b8fa.webp", date: "2026-01-20" },
-        { title: "أسئلة شائعة عن غرف السندويش بنل", excerpt: "إجابات عن أكثر الأسئلة شيوعاً حول شراء وتركيب السندويش بنل.", img: "https://i.postimg.cc/JzMT2D95/IMG-20260118-WA0027.jpg", date: "2026-01-18" },
-        { title: "مشاريع غرف سندويش بنل منفذة", excerpt: "صور لأحدث مشاريع غرف السندويش بنل المنفذة في الأحساء.", img: "https://i.postimg.cc/dVwWxkzG/trkyb-sandwtsh-banl-24.jpg", date: "2026-01-15" },
-        { title: "مقارنة بين السندويش بنل والبناء التقليدي", excerpt: "أيهما أفضل: غرف السندويش بنل أم البناء بالطوب؟ تحليل شامل.", img: "https://i.postimg.cc/15pCBcYB/swr-ghrf-sandwtsh-bnl.jpg", date: "2026-01-12" },
-        { title: "نصائح قبل شراء غرفة سندويش بنل", excerpt: "دليل شراء شامل لتختار أفضل غرفة سندويش بنل تناسب احتياجك.", img: "https://i.postimg.cc/Kvnqfrs9/mqawl-trkyb-sandwtsh-banl-38011403.jpg", date: "2026-01-10" },
-        { title: "أفضل أنواع سندويش بنل في السعودية", excerpt: "تعرف على أفضل ماركات ألواح السندويش بنل المتوفرة في السوق السعودي.", img: "https://i.postimg.cc/x1ns4JWG/096549a75e0139878c670e2f3dbfb857-1.webp", date: "2026-01-08" }
+        { title: "كل ما تريد معرفته عن غرف السندويش بنل", excerpt: "دليل شامل عن غرف الساندوتش بانل: أنواعها، مميزاتها، وأسعارها في الأحساء.", date: "2026-02-25" },
+        { title: "الفرق بين سندويش بنل والشينكو", excerpt: "مقارنة تفصيلية بين ألواح السندويش بنل وألواح الشينكو من حيث العزل والمتانة.", date: "2026-02-22" },
+        { title: "كم تكلفة غرفة سندويش بنل في الأحساء 2026؟", excerpt: "تقديرات تكلفة غرف السندويش بنل حسب المساحة والمواصفات.", date: "2026-02-20" },
+        { title: "مميزات العزل الحراري في سندويش بنل", excerpt: "كيف توفر ألواح السندويش بنل عزلًا حراريًا ممتازًا للمستودعات والغرف.", date: "2026-02-18" },
+        { title: "غرف سندويش بنل للمزارع", excerpt: "استخدامات غرف السندويش بنل في المزارع كغرف عمال ومخازن للمعدات.", date: "2026-02-15" },
+        { title: "تركيب غرف سندويش بنل: خطوة بخطوة", excerpt: "مراحل تركيب غرفة السندويش بنل من الأساس إلى التشطيب.", date: "2026-02-12" },
+        { title: "ملاحق منازل بسندويش بنل", excerpt: "تصاميم ملاحق خارجية فاخرة للمنازل باستخدام ألواح السندويش بنل.", date: "2026-02-10" },
+        { title: "مستودعات تخزين جاهزة", excerpt: "مستودعات سريعة التركيب للاستخدامات التجارية والصناعية.", date: "2026-02-08" },
+        { title: "عزل صوتي باستخدام سندويش بنل", excerpt: "كيف تساعد ألواح السندويش بنل في عزل الصوت داخل الغرف.", date: "2026-02-05" },
+        { title: "غرف عمال جاهزة للمشاريع", excerpt: "حلول سكن العمال بغرف سندويش بنل سريعة التركيب ومنخفضة التكلفة.", date: "2026-02-03" },
+        { title: "سندويش بنل مقاوم للحريق", excerpt: "مواصفات الألواح المقاومة للحريق واستخداماتها في المنشآت الحساسة.", date: "2026-02-01" },
+        { title: "أحجام وأشكال غرف السندويش بنل", excerpt: "المقاسات القياسية والتصاميم المتاحة لغرف السندويش بنل.", date: "2026-01-28" },
+        { title: "صيانة وتنظيف غرف السندويش بنل", excerpt: "نصائح للحفاظ على غرف السندويش بنل نظيفة ومعمرة.", date: "2026-01-25" },
+        { title: "سندويش بنل للاستخدامات الصناعية", excerpt: "تطبيقات السندويش بنل في المصانع والمستودعات الصناعية.", date: "2026-01-22" },
+        { title: "تكييف غرف السندويش بنل", excerpt: "كيفية تركيب أنظمة التكييف في غرف السندويش بنل.", date: "2026-01-20" },
+        { title: "أسئلة شائعة عن غرف السندويش بنل", excerpt: "إجابات عن أكثر الأسئلة شيوعاً حول شراء وتركيب السندويش بنل.", date: "2026-01-18" },
+        { title: "مشاريع غرف سندويش بنل منفذة", excerpt: "صور لأحدث مشاريع غرف السندويش بنل المنفذة في الأحساء.", date: "2026-01-15" },
+        { title: "مقارنة بين السندويش بنل والبناء التقليدي", excerpt: "أيهما أفضل: غرف السندويش بنل أم البناء بالطوب؟ تحليل شامل.", date: "2026-01-12" },
+        { title: "نصائح قبل شراء غرفة سندويش بنل", excerpt: "دليل شراء شامل لتختار أفضل غرفة سندويش بنل تناسب احتياجك.", date: "2026-01-10" },
+        { title: "أفضل أنواع سندويش بنل في السعودية", excerpt: "تعرف على أفضل ماركات ألواح السندويش بنل المتوفرة في السوق السعودي.", date: "2026-01-08" }
     ];
 
     const grid = document.getElementById('gallery-grid');
@@ -752,7 +742,7 @@
         grid.appendChild(card);
     });
 
-    // إنشاء قسم الـ 20 مقالة
+    // إنشاء قسم الـ 20 مقالة (بدون صور)
     const articlesGrid = document.getElementById('articles-grid');
     if (articlesGrid) {
         articlesData.forEach(article => {
@@ -761,8 +751,8 @@
             const dateObj = new Date(article.date);
             const arabicDate = dateObj.toLocaleDateString('ar-SA', { year: 'numeric', month: 'short', day: 'numeric' });
             card.innerHTML = `
-                <div class="article-image">
-                    <img src="${article.img}" alt="${article.title}" loading="lazy">
+                <div class="article-icon">
+                    <i class="fas fa-newspaper"></i>
                 </div>
                 <div class="article-content">
                     <h3 class="article-title"><a href="#">${article.title}</a></h3>
