@@ -355,7 +355,7 @@
             border-color: #E86A33;
         }
 
-        /* قسم المقالات الجديد - أسفل الصفحة */
+        /* قسم المقالات الجديد - بدون صور */
         .articles-section {
             margin-top: 60px;
             padding: 40px 20px;
@@ -386,24 +386,21 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             transition: 0.3s;
             border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
         }
         .article-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(232,106,51,0.15);
             border-color: #E86A33;
         }
-        .article-image {
-            height: 180px;
-            overflow: hidden;
-        }
-        .article-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: 0.5s;
-        }
-        .article-card:hover .article-image img {
-            transform: scale(1.05);
+        .article-icon {
+            background: #0A1929;
+            color: #E86A33;
+            font-size: 2.5rem;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 3px solid #E86A33;
         }
         .article-content {
             padding: 20px 15px;
@@ -559,24 +556,17 @@
 <!-- شريط التنقل -->
 <nav>
     <a href="index.html">الرئيسية</a>
-    <a href="#">مظلات</a>
-    <a href="mazlat-sayarat.html">مظلات سيارات</a>
-    <a href="#">soater.com</a>
-    <a href="mazlat-lksan.html">مظلات لكسان</a>
-    <a href="#">مظلات خزانات</a>
-    <a href="hangar.html">هناجر مستودعات</a>
-    <a href="hadayeq.html">تنسيق حدائق</a>
-    <a href="#">مظلات الشد الإنشائي</a>
-    <a href="#">مظلات مسابح</a>
+    <a href="berjolat.html">برجولات</a>
+    <a href="hadayeq.html">حدائق</a>
+    <a href="khayam.html">بيوت شعر</a>
     <a href="sawater.html">سواتر</a>
-    <a href="#">سواتر قماش</a>
-    <a href="#">سواتر شرائح حديد</a>
-    <a href="#">سواتر خشبية</a>
-    <a href="qarmid.html">قرميد</a>
-    <a href="khayam.html">بيوت شعر ملكي</a>
+    <a href="mazlat-lksan.html">مظلات لكسان</a>
     <a href="sandwich-panel.html">ساندوتش بانل</a>
+    <a href="mazlat-sayarat.html">مظلات سيارات</a>
     <a href="decor.html">ديكورات</a>
-    <a href="mashabat.html">مشبات تراثية</a>
+    <a href="qarmid.html">قرميد</a>
+    <a href="hangar.html">هناجر</a>
+    <a href="mashabat.html">مشبات</a>
 </nav>
 
 <!-- عنوان الصفحة - تم تحسين وضوح الخلفية -->
@@ -613,7 +603,7 @@
     </div>
 </div>
 
-<!-- ===== قسم المقالات الجديد (20 مقالة) ===== -->
+<!-- ===== قسم المقالات الجديد (20 مقالة بدون صور) ===== -->
 <div class="articles-section">
     <div class="container">
         <h2 class="section-title">آخر المقالات</h2>
@@ -655,7 +645,6 @@
     <div class="designer">تصميم <span>سليمان الحكمي</span> 0551987351</div>
 </footer>
 
-<!-- JavaScript لإنشاء البطاقات والمقالات -->
 <script>
     // قائمة بجميع صور المظلات (كما هي)
     const images = [
@@ -797,28 +786,28 @@
         { text: "أفضل مظلات في الأحساء، جودة عالية وتعامل راقي.", client: "إبراهيم العلي - الصناعية" }
     ];
 
-    // قائمة الـ 20 مقالة حول المظلات
+    // قائمة الـ 20 مقالة حول المظلات (بدون صور)
     const articlesData = [
-        { title: "كل ما تريد معرفته عن مظلات السيارات", excerpt: "دليل شامل عن أنواع مظلات السيارات، المواد المستخدمة، وأسعارها في الأحساء.", img: "https://i.postimg.cc/nLsw4b8X/0157.webp", date: "2026-02-25" },
-        { title: "الفرق بين المظلات الهرمية والمخروطية", excerpt: "مقارنة تفصيلية بين التصميم الهرمي والمخروطي من حيث الشكل والمتانة.", img: "https://i.postimg.cc/8CFnRQ8J/0159.webp", date: "2026-02-22" },
-        { title: "مظلات مسابح: حماية ونظافة", excerpt: "كيف تساعد مظلات المسابح في الحفاظ على نظافة المياه وتقليل التبخر.", img: "https://i.postimg.cc/KYKsPSXR/0164.webp", date: "2026-02-20" },
-        { title: "كم تكلفة مظلة سيارة في الأحساء 2026؟", excerpt: "تقديرات تكلفة مظلات السيارات حسب المساحة والتصميم.", img: "https://i.postimg.cc/HLJPwDGp/0185.webp", date: "2026-02-18" },
-        { title: "مظلات مواقف السيارات للمؤسسات", excerpt: "أفضل حلول تظليل مواقف الشركات والمؤسسات بأحدث التصاميم.", img: "https://i.postimg.cc/0N6HYRgQ/0196.webp", date: "2026-02-15" },
-        { title: "مظلات مدارس: أمان وجودة", excerpt: "مواصفات مظلات المدارس لضمان سلامة الطلاب وجودة التظليل.", img: "https://i.postimg.cc/d07S2PM3/0202.webp", date: "2026-02-12" },
-        { title: "مظلات هرمية للفلل والقصور", excerpt: "تصاميم فاخرة للمظلات الهرمية تضفي جمالاً على المداخل والحدائق.", img: "https://i.postimg.cc/VNSHqQy5/0206.webp", date: "2026-02-10" },
-        { title: "مظلات مخروطية عصرية", excerpt: "أحدث تصاميم المظلات المخروطية التي تجمع بين الوظيفة والجمال.", img: "https://i.postimg.cc/D0hj3SSz/5348356309826342711-121.jpg", date: "2026-02-08" },
-        { title: "مظلات مع إضاءة ليد مخفية", excerpt: "تصاميم مظلات عصرية مع إضاءة ليد تضيف أجواء ساحرة ليلاً.", img: "https://i.postimg.cc/rsTn2DD2/5361556363529621624-120.jpg", date: "2026-02-05" },
-        { title: "مظلات سيارات قوسية", excerpt: "مظلات سيارات بتصميم قوسي أنيق يناسب الفلل الحديثة.", img: "https://i.postimg.cc/NFtJvKKQ/5361556363529621633-120.jpg", date: "2026-02-03" },
-        { title: "عزل حراري باستخدام مظلات PVC", excerpt: "كيف تساعد مظلات PVC في تقليل درجة حرارة السيارات والمسطحات.", img: "https://i.postimg.cc/L5SCFJJM/5361556363529621636-120.jpg", date: "2026-02-01" },
-        { title: "مظلات مواقف متعددة", excerpt: "تصاميم مظلات تغطي عدة سيارات في موقف واحد بتكلفة اقتصادية.", img: "https://i.postimg.cc/gjpSbxxp/5361556363529621688-121.jpg", date: "2026-01-28" },
-        { title: "مظلات مقاومة للرياح", excerpt: "مواصفات المظلات المقاومة للرياح في المنطقة الشرقية.", img: "https://i.postimg.cc/26hctQSk/5361556363529621689-120.jpg", date: "2026-01-25" },
-        { title: "صيانة وتنظيف المظلات", excerpt: "نصائح للحفاظ على مظلتك نظيفة ومعمرة لأطول فترة.", img: "https://i.postimg.cc/8cGKg7j2/5361556363529621690-120.jpg", date: "2026-01-22" },
-        { title: "ألوان المظلات المتوفرة", excerpt: "دليل ألوان المظلات وكيفية اختيار المناسب لديكور منزلك.", img: "https://i.postimg.cc/xCMxZv1T/5361556363529621691-120.jpg", date: "2026-01-20" },
-        { title: "مظلات للحدائق والجلسات الخارجية", excerpt: "استخدامات المظلات في تظليل الجلسات الخارجية وحماية الأثاث.", img: "https://i.postimg.cc/mk4XWPPx/5361556363529621693-121.jpg", date: "2026-01-18" },
-        { title: "أسئلة شائعة عن تركيب المظلات", excerpt: "إجابات عن أكثر الأسئلة شيوعاً حول تركيب وتوريد المظلات.", img: "https://i.postimg.cc/2yYcN11R/5361556363529621696-121.jpg", date: "2026-01-15" },
-        { title: "مشاريع مظلات منفذة في الأحساء", excerpt: "صور لأحدث مشاريع المظلات المنفذة في الهفوف والمبرز والعيون.", img: "https://i.postimg.cc/wvLfrXjH/5361556363529621698-120.jpg", date: "2026-01-12" },
-        { title: "مقارنة بين مظلات القماش واللكسان", excerpt: "أيهما أفضل: مظلات القماش أم اللكسان؟ تحليل مفصل للمزايا.", img: "https://i.postimg.cc/ydcQGm8z/5361556363529621699-120.jpg", date: "2026-01-10" },
-        { title: "نصائح قبل شراء مظلة", excerpt: "دليل شراء شامل لتختار أفضل مظلة تناسب احتياجك.", img: "https://i.postimg.cc/tTWSc34b/5361556363529621700-120.jpg", date: "2026-01-08" }
+        { title: "كل ما تريد معرفته عن مظلات السيارات", excerpt: "دليل شامل عن أنواع مظلات السيارات، المواد المستخدمة، وأسعارها في الأحساء.", date: "2026-02-25" },
+        { title: "الفرق بين المظلات الهرمية والمخروطية", excerpt: "مقارنة تفصيلية بين التصميم الهرمي والمخروطي من حيث الشكل والمتانة.", date: "2026-02-22" },
+        { title: "مظلات مسابح: حماية ونظافة", excerpt: "كيف تساعد مظلات المسابح في الحفاظ على نظافة المياه وتقليل التبخر.", date: "2026-02-20" },
+        { title: "كم تكلفة مظلة سيارة في الأحساء 2026؟", excerpt: "تقديرات تكلفة مظلات السيارات حسب المساحة والتصميم.", date: "2026-02-18" },
+        { title: "مظلات مواقف السيارات للمؤسسات", excerpt: "أفضل حلول تظليل مواقف الشركات والمؤسسات بأحدث التصاميم.", date: "2026-02-15" },
+        { title: "مظلات مدارس: أمان وجودة", excerpt: "مواصفات مظلات المدارس لضمان سلامة الطلاب وجودة التظليل.", date: "2026-02-12" },
+        { title: "مظلات هرمية للفلل والقصور", excerpt: "تصاميم فاخرة للمظلات الهرمية تضفي جمالاً على المداخل والحدائق.", date: "2026-02-10" },
+        { title: "مظلات مخروطية عصرية", excerpt: "أحدث تصاميم المظلات المخروطية التي تجمع بين الوظيفة والجمال.", date: "2026-02-08" },
+        { title: "مظلات مع إضاءة ليد مخفية", excerpt: "تصاميم مظلات عصرية مع إضاءة ليد تضيف أجواء ساحرة ليلاً.", date: "2026-02-05" },
+        { title: "مظلات سيارات قوسية", excerpt: "مظلات سيارات بتصميم قوسي أنيق يناسب الفلل الحديثة.", date: "2026-02-03" },
+        { title: "عزل حراري باستخدام مظلات PVC", excerpt: "كيف تساعد مظلات PVC في تقليل درجة حرارة السيارات والمسطحات.", date: "2026-02-01" },
+        { title: "مظلات مواقف متعددة", excerpt: "تصاميم مظلات تغطي عدة سيارات في موقف واحد بتكلفة اقتصادية.", date: "2026-01-28" },
+        { title: "مظلات مقاومة للرياح", excerpt: "مواصفات المظلات المقاومة للرياح في المنطقة الشرقية.", date: "2026-01-25" },
+        { title: "صيانة وتنظيف المظلات", excerpt: "نصائح للحفاظ على مظلتك نظيفة ومعمرة لأطول فترة.", date: "2026-01-22" },
+        { title: "ألوان المظلات المتوفرة", excerpt: "دليل ألوان المظلات وكيفية اختيار المناسب لديكور منزلك.", date: "2026-01-20" },
+        { title: "مظلات للحدائق والجلسات الخارجية", excerpt: "استخدامات المظلات في تظليل الجلسات الخارجية وحماية الأثاث.", date: "2026-01-18" },
+        { title: "أسئلة شائعة عن تركيب المظلات", excerpt: "إجابات عن أكثر الأسئلة شيوعاً حول تركيب وتوريد المظلات.", date: "2026-01-15" },
+        { title: "مشاريع مظلات منفذة في الأحساء", excerpt: "صور لأحدث مشاريع المظلات المنفذة في الهفوف والمبرز والعيون.", date: "2026-01-12" },
+        { title: "مقارنة بين مظلات القماش واللكسان", excerpt: "أيهما أفضل: مظلات القماش أم اللكسان؟ تحليل مفصل للمزايا.", date: "2026-01-10" },
+        { title: "نصائح قبل شراء مظلة", excerpt: "دليل شراء شامل لتختار أفضل مظلة تناسب احتياجك.", date: "2026-01-08" }
     ];
 
     const grid = document.getElementById('gallery-grid');
@@ -850,7 +839,7 @@
         grid.appendChild(card);
     });
 
-    // إنشاء قسم الـ 20 مقالة
+    // إنشاء قسم الـ 20 مقالة (بدون صور)
     const articlesGrid = document.getElementById('articles-grid');
     if (articlesGrid) {
         articlesData.forEach(article => {
@@ -859,8 +848,8 @@
             const dateObj = new Date(article.date);
             const arabicDate = dateObj.toLocaleDateString('ar-SA', { year: 'numeric', month: 'short', day: 'numeric' });
             card.innerHTML = `
-                <div class="article-image">
-                    <img src="${article.img}" alt="${article.title}" loading="lazy">
+                <div class="article-icon">
+                    <i class="fas fa-newspaper"></i>
                 </div>
                 <div class="article-content">
                     <h3 class="article-title"><a href="#">${article.title}</a></h3>
